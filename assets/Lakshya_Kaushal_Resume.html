@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshya Kaushal - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f4f6f8;
+            color: #333;
+            line-height: 1.3;
+            font-size: 11px;
+        }
+
+        .resume-container {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            margin: 20px auto;
+            padding: 8mm 12mm;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 8px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #2c3e50;
+        }
+
+        h1 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 11px;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        .section {
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 4px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 2px;
+        }
+
+        .summary {
+            font-size: 11.5px;
+            text-align: justify;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .item-subtitle {
+            font-style: italic;
+            color: #666;
+            font-size: 11px;
+        }
+
+        .item-date {
+            font-size: 11px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        ul {
+            padding-left: 15px;
+            margin-bottom: 6px;
+        }
+
+        li {
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px 15px;
+        }
+
+        .skill-category {
+            font-weight: 600;
+            color: #444;
+        }
+
+        .certifications,
+        .profiles {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px 15px;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            body {
+                background: white;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .resume-container {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 10mm 15mm;
+                box-shadow: none;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <!-- HEADER -->
+        <header>
+            <h1>Lakshya Kaushal</h1>
+            <div class="contact-info">
+                <span>📍 Kanpur, India</span>
+                <span>📧 <a href="mailto:kaushallakshya71@gmail.com">kaushallakshya71@gmail.com</a></span>
+                <span>📞 +91 8077438455</span><br>
+                <span>🔗 <a href="https://www.linkedin.com/in/lakshya-kaushal-6ab266366"
+                        target="_blank">LinkedIn</a></span>
+                <span>💻 <a href="https://github.com/lakshyakaushal" target="_blank">GitHub</a></span>
+                <!-- Using a cleaner link style -->
+            </div>
+        </header>
+
+        <!-- OBJECTIVE -->
+        <div class="section summary">
+            Motivated B.Tech CSE (AI/ML) student with a strong passion for backend development, machine learning, and
+            problem-solving. Proven ability to build full-stack applications and predictive models. Seeking to leverage
+            skills in software engineering to build scalable systems and contribute to innovative tech teams.
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="item-header">
+                <span class="item-title">Maharana Institute of Professional Studies (MIPS)</span>
+                <span class="item-date">Graduating: 2027</span>
+            </div>
+            <div class="item-subtitle">Bachelor of Technology in Computer Science Engineering (AI & ML)</div>
+            <ul>
+                <li><strong>CGPA:</strong> 7.5</li>
+            </ul>
+        </div>
+
+        <!-- TECHNICAL SKILLS -->
+        <div class="section">
+            <h2 class="section-title">Technical Skills & Fundamentals</h2>
+            <div class="skills-grid">
+                <div><span class="skill-category">Languages:</span> Python, C, Java, JavaScript, SQL, HTML, CSS</div>
+                <div><span class="skill-category">Web Technologies:</span> React.js, Node.js</div>
+                <div><span class="skill-category">Core Concepts:</span> Data Structures & Algorithms (DSA), DBMS, OOPs,
+                    Operating Systems</div>
+                <div><span class="skill-category">Languages Known:</span> English, Hindi</div>
+            </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="section">
+            <h2 class="section-title">Key Projects</h2>
+
+            <div class="item-header">
+                <span class="item-title">Mistri - Smart Electronics Repair Management System</span>
+            </div>
+            <ul>
+                <li>Developed a robust full-stack management platform featuring specialized dashboards for Admins,
+                    Staff, and Customers.</li>
+                <li>Implemented backend APIs handling secure authentication (JWT), dynamic inventory management, and
+                    bilingual support (English/Hindi).</li>
+                <li><strong>Tech Stack:</strong> Python, JavaScript, CSS, SQL, Web Security.</li>
+            </ul>
+
+            <div class="item-header">
+                <span class="item-title">AI Resume Engine</span>
+            </div>
+            <ul>
+                <li>Engineered an AI-powered resume analysis tool comprising 9 integrated modules including resume
+                    matching and roadmap generation.</li>
+                <li>Optimized User Interface for a seamless workflow, significantly enhancing readability and ATS
+                    optimization accuracy for end-users.</li>
+                <li><strong>Tech Stack:</strong> JavaScript, HTML, CSS, AI APIs.</li>
+            </ul>
+
+            <div class="item-header">
+                <span class="item-title">Early Academic Warning System (Dropout Prediction)</span>
+            </div>
+            <ul>
+                <li>Designed and trained a machine learning predictive model to identify at-risk students and forecast
+                    potential drop years.</li>
+                <li>Analyzed complex student datasets to deliver actionable insights directly to educational
+                    administrators via analytical dashboards.</li>
+                <li><strong>Tech Stack:</strong> Python, Machine Learning (Scikit-Learn).</li>
+            </ul>
+        </div>
+
+        <!-- CODING PROFILES & ACHIEVEMENTS -->
+        <div class="section">
+            <h2 class="section-title">Coding Profiles & Achievements</h2>
+            <div class="profiles">
+                <li><strong>HackerRank:</strong> 5-Star rating in Python and C.</li>
+                <li><strong>LeetCode:</strong> Successfully solved 100+ algorithmic problems.</li>
+                <li><strong>CodeChef & Codeforces:</strong> Active participant in competitive programming challenges.
+                </li>
+            </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications">
+                <li>Data Visualisation using Python <em>(IBM)</em></li>
+                <li>AI Foundations Associate <em>(Oracle)</em></li>
+                <li>Databricks for Machine Learning <em>(Simplilearn)</em></li>
+                <li>Generative AI Studio <em>(Simplilearn)</em></li>
+                <li>Verified Python Essentials <em>(CISCO Networking Academy)</em></li>
+                <li>JavaScript Intermediate <em>(HackerRank)</em></li>
+            </div>
+        </div>
+
+        <!-- EXTRACURRICULAR -->
+        <div class="section">
+            <h2 class="section-title">Extracurricular Activities & Interests</h2>
+            <div class="profiles">
+                <li><strong>Leadership:</strong> Active member of the College Coding Club & Tech Community.</li>
+                <li><strong>Open Source:</strong> Enthusiastic contributor to open-source student repositories.</li>
+                <li><strong>Interests:</strong> Coding, Music, Travelling.</li>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
