@@ -16,71 +16,124 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #f4f6f8;
-            color: #333;
-            line-height: 1.3;
+            background: #f0f2f5;
+            color: #1a1a2e;
+            line-height: 1.35;
             font-size: 11px;
         }
 
         .resume-container {
             width: 210mm;
-            height: 297mm;
+            min-height: 297mm;
             background: white;
             margin: 20px auto;
-            padding: 8mm 12mm;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
 
-        header {
+        /* --- TOP HEADER BAND --- */
+        .resume-header {
+            background: linear-gradient(135deg, #0d1a2e 0%, #1a3a5c 100%);
+            color: white;
+            padding: 18px 22px 14px;
             text-align: center;
-            margin-bottom: 8px;
-            padding-bottom: 6px;
-            border-bottom: 2px solid #2c3e50;
+            position: relative;
         }
 
-        h1 {
-            font-size: 22px;
-            color: #2c3e50;
-            margin-bottom: 4px;
-            letter-spacing: 1px;
+        .resume-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #c9a84c, #e8c97a, #c9a84c);
+        }
+
+        .resume-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
             text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .header-title-line {
+            font-size: 11px;
+            color: #c9a84c;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 10px;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 10px;
-            font-size: 11px;
-            color: #555;
+            gap: 6px 14px;
+            font-size: 10.5px;
+            color: #cdd5e0;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .contact-info a {
-            color: #2980b9;
+            color: #c9a84c;
             text-decoration: none;
         }
 
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- BODY CONTENT --- */
+        .resume-body {
+            padding: 14px 22px;
+        }
+
+        /* --- SECTION --- */
         .section {
-            margin-bottom: 8px;
+            margin-bottom: 11px;
         }
 
         .section-title {
-            font-size: 13px;
-            color: #2c3e50;
+            font-size: 11px;
+            color: #0d1a2e;
             text-transform: uppercase;
             font-weight: 700;
-            margin-bottom: 4px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 2px;
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+            padding-bottom: 3px;
+            border-bottom: 1.5px solid #c9a84c;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .summary {
-            font-size: 11.5px;
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #c9a84c;
+            border-radius: 50%;
+        }
+
+        /* --- SUMMARY --- */
+        .summary-text {
+            font-size: 11px;
             text-align: justify;
-            margin-bottom: 8px;
-            line-height: 1.35;
+            line-height: 1.6;
+            color: #333;
         }
 
+        /* --- EDUCATION --- */
         .item-header {
             display: flex;
             justify-content: space-between;
@@ -89,49 +142,165 @@
         }
 
         .item-title {
-            font-weight: 600;
-            font-size: 12px;
-            color: #333;
+            font-weight: 700;
+            font-size: 11.5px;
+            color: #0d1a2e;
         }
 
         .item-subtitle {
             font-style: italic;
-            color: #666;
-            font-size: 11px;
+            color: #555;
+            font-size: 10.5px;
+            margin-bottom: 2px;
         }
 
         .item-date {
-            font-size: 11px;
+            font-size: 10.5px;
             color: #666;
-            font-weight: 500;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .cgpa-badge {
+            display: inline-block;
+            background: #f0f7ff;
+            border: 1px solid #c9a84c;
+            border-radius: 3px;
+            padding: 1px 7px;
+            font-size: 10px;
+            font-weight: 600;
+            color: #0d1a2e;
+            margin-top: 2px;
+        }
+
+        /* --- SKILLS GRID --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .skill-row {
+            font-size: 10.5px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .skill-category {
+            font-weight: 700;
+            color: #0d1a2e;
+        }
+
+        /* --- PROJECTS --- */
+        .project-item {
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 11.5px;
+            color: #0d1a2e;
+        }
+
+        .project-stack {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin-top: 2px;
+        }
+
+        .stack-tag {
+            font-size: 9.5px;
+            font-weight: 600;
+            background: #eef3fa;
+            border: 1px solid #c9a84c55;
+            color: #0d1a2e;
+            padding: 1px 6px;
+            border-radius: 2px;
         }
 
         ul {
-            padding-left: 15px;
-            margin-bottom: 6px;
+            padding-left: 14px;
+            margin: 3px 0 4px;
         }
 
         li {
             margin-bottom: 2px;
             text-align: justify;
+            font-size: 10.5px;
+            color: #333;
+            line-height: 1.5;
         }
 
-        .skills-grid {
+        /* --- WORKSHOP --- */
+        .workshop-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .workshop-org {
+            font-size: 10px;
+            font-weight: 700;
+            color: #c9a84c;
+        }
+
+        /* --- CERTIFICATIONS GRID --- */
+        .cert-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3px 15px;
+            gap: 3px 20px;
         }
 
-        .skill-category {
+        .cert-item {
+            font-size: 10.5px;
+            color: #333;
+            line-height: 1.5;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .cert-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #c9a84c;
+            font-weight: 700;
+            font-size: 9px;
+        }
+
+        .cert-item em {
+            color: #666;
+            font-style: normal;
             font-weight: 600;
-            color: #444;
         }
 
-        .certifications,
-        .profiles {
+        /* --- ACHIEVEMENTS --- */
+        .profiles-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2px 15px;
+            gap: 3px 20px;
+        }
+
+        .profile-item {
+            font-size: 10.5px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .profile-item strong {
+            color: #0d1a2e;
+        }
+
+        /* --- FOOTER LINE --- */
+        .resume-footer {
+            margin-top: 12px;
+            padding-top: 6px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 9px;
+            color: #aaa;
+            letter-spacing: 0.5px;
         }
 
         @media print {
@@ -143,15 +312,13 @@
             body {
                 background: white;
                 -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
             .resume-container {
                 width: 210mm;
-                height: 297mm;
                 margin: 0;
-                padding: 10mm 15mm;
                 box-shadow: none;
-                border: none;
             }
         }
     </style>
@@ -159,123 +326,175 @@
 
 <body>
     <div class="resume-container">
+
         <!-- HEADER -->
-        <header>
+        <div class="resume-header">
             <h1>Lakshya Kaushal</h1>
+            <div class="header-title-line">Full-Stack Developer &amp; AI/ML Engineer</div>
             <div class="contact-info">
                 <span>📍 Kanpur, India</span>
                 <span>📧 <a href="mailto:kaushallakshya71@gmail.com">kaushallakshya71@gmail.com</a></span>
-                <span>📞 +91 8077438455</span><br>
-                <span>🔗 <a href="https://www.linkedin.com/in/lakshya-kaushal-6ab266366"
-                        target="_blank">LinkedIn</a></span>
-                <span>💻 <a href="https://github.com/lakshyakaushal" target="_blank">GitHub</a></span>
-                <!-- Using a cleaner link style -->
-            </div>
-        </header>
-
-        <!-- OBJECTIVE -->
-        <div class="section summary">
-            Motivated B.Tech CSE (AI/ML) student with a strong passion for backend development, machine learning, and
-            problem-solving. Proven ability to build full-stack applications and predictive models. Seeking to leverage
-            skills in software engineering to build scalable systems and contribute to innovative tech teams.
-        </div>
-
-        <!-- EDUCATION -->
-        <div class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="item-header">
-                <span class="item-title">Maharana Institute of Professional Studies (MIPS)</span>
-                <span class="item-date">Graduating: 2027</span>
-            </div>
-            <div class="item-subtitle">Bachelor of Technology in Computer Science Engineering (AI & ML)</div>
-            <ul>
-                <li><strong>CGPA:</strong> 7.5</li>
-            </ul>
-        </div>
-
-        <!-- TECHNICAL SKILLS -->
-        <div class="section">
-            <h2 class="section-title">Technical Skills & Fundamentals</h2>
-            <div class="skills-grid">
-                <div><span class="skill-category">Languages:</span> Python, C, Java, JavaScript, SQL, HTML, CSS</div>
-                <div><span class="skill-category">Web Technologies:</span> React.js, Node.js</div>
-                <div><span class="skill-category">Core Concepts:</span> Data Structures & Algorithms (DSA), DBMS, OOPs,
-                    Operating Systems</div>
-                <div><span class="skill-category">Languages Known:</span> English, Hindi</div>
+                <span>📞 +91 8077438455</span>
+                <span>🔗 <a href="https://www.linkedin.com/in/lakshya-kaushal-6ab266366" target="_blank">linkedin.com/in/lakshya-kaushal-cse</a></span>
+                <span>💻 <a href="https://github.com/kaushallakshya71-a11y" target="_blank">github.com/kaushallakshya71-a11y</a></span>
             </div>
         </div>
 
-        <!-- PROJECTS -->
-        <div class="section">
-            <h2 class="section-title">Key Projects</h2>
+        <div class="resume-body">
 
-            <div class="item-header">
-                <span class="item-title">Mistri - Smart Electronics Repair Management System</span>
+            <!-- PROFESSIONAL SUMMARY -->
+            <div class="section">
+                <div class="section-title">Professional Summary</div>
+                <p class="summary-text">
+                    B.Tech CSE (AI &amp; ML) student at MIPS, Kanpur (Graduating 2027) with hands-on experience in full-stack development,
+                    machine learning, and AI-powered applications. Built production-level projects using Python, Java, JavaScript, React.js,
+                    and Node.js. Certified in Neural Networks, Computer Vision, NLP (NPTEL), and Data Analytics (Physics Wallah).
+                    5-Star HackerRank rating in Python, Java, and SQL. Seeking a Software Engineering, ML Engineering, or
+                    Full-Stack Development role to build scalable, impactful systems.
+                </p>
             </div>
-            <ul>
-                <li>Developed a robust full-stack management platform featuring specialized dashboards for Admins,
-                    Staff, and Customers.</li>
-                <li>Implemented backend APIs handling secure authentication (JWT), dynamic inventory management, and
-                    bilingual support (English/Hindi).</li>
-                <li><strong>Tech Stack:</strong> Python, JavaScript, CSS, SQL, Web Security.</li>
-            </ul>
 
-            <div class="item-header">
-                <span class="item-title">AI Resume Engine</span>
+            <!-- EDUCATION -->
+            <div class="section">
+                <div class="section-title">Education</div>
+                <div class="item-header">
+                    <span class="item-title">Maharana Institute of Professional Studies (MIPS), Kanpur</span>
+                    <span class="item-date">2023 – 2027</span>
+                </div>
+                <div class="item-subtitle">Bachelor of Technology — Computer Science Engineering (AI &amp; ML)</div>
+                <span class="cgpa-badge">CGPA: 7.5</span>
             </div>
-            <ul>
-                <li>Engineered an AI-powered resume analysis tool comprising 9 integrated modules including resume
-                    matching and roadmap generation.</li>
-                <li>Optimized User Interface for a seamless workflow, significantly enhancing readability and ATS
-                    optimization accuracy for end-users.</li>
-                <li><strong>Tech Stack:</strong> JavaScript, HTML, CSS, AI APIs.</li>
-            </ul>
 
-            <div class="item-header">
-                <span class="item-title">Early Academic Warning System (Dropout Prediction)</span>
+            <!-- TECHNICAL SKILLS -->
+            <div class="section">
+                <div class="section-title">Technical Skills &amp; Fundamentals</div>
+                <div class="skills-grid">
+                    <div class="skill-row"><span class="skill-category">Languages:</span> Python, Java, C, JavaScript, SQL, HTML, CSS</div>
+                    <div class="skill-row"><span class="skill-category">Web Technologies:</span> React.js, Node.js, REST APIs</div>
+                    <div class="skill-row"><span class="skill-category">AI / ML:</span> Scikit-Learn, Neural Networks, Computer Vision, NLP</div>
+                    <div class="skill-row"><span class="skill-category">Core Concepts:</span> DSA, DBMS, OOPs, Operating Systems</div>
+                    <div class="skill-row"><span class="skill-category">Tools:</span> Git, GitHub, VS Code</div>
+                    <div class="skill-row"><span class="skill-category">Databases:</span> SQL, MySQL</div>
+                </div>
             </div>
-            <ul>
-                <li>Designed and trained a machine learning predictive model to identify at-risk students and forecast
-                    potential drop years.</li>
-                <li>Analyzed complex student datasets to deliver actionable insights directly to educational
-                    administrators via analytical dashboards.</li>
-                <li><strong>Tech Stack:</strong> Python, Machine Learning (Scikit-Learn).</li>
-            </ul>
-        </div>
 
-        <!-- CODING PROFILES & ACHIEVEMENTS -->
-        <div class="section">
-            <h2 class="section-title">Coding Profiles & Achievements</h2>
-            <div class="profiles">
-                <li><strong>HackerRank:</strong> 5-Star rating in Python and C.</li>
-                <li><strong>LeetCode:</strong> Successfully solved 100+ algorithmic problems.</li>
-                <li><strong>CodeChef & Codeforces:</strong> Active participant in competitive programming challenges.
-                </li>
-            </div>
-        </div>
+            <!-- PROJECTS -->
+            <div class="section">
+                <div class="section-title">Key Projects</div>
 
-        <!-- CERTIFICATIONS -->
-        <div class="section">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certifications">
-                <li>Data Visualisation using Python <em>(IBM)</em></li>
-                <li>AI Foundations Associate <em>(Oracle)</em></li>
-                <li>Databricks for Machine Learning <em>(Simplilearn)</em></li>
-                <li>Generative AI Studio <em>(Simplilearn)</em></li>
-                <li>Verified Python Essentials <em>(CISCO Networking Academy)</em></li>
-                <li>JavaScript Intermediate <em>(HackerRank)</em></li>
-            </div>
-        </div>
+                <div class="project-item">
+                    <div class="project-title">Mistri — Smart Electronics Repair Management System</div>
+                    <ul>
+                        <li>Built a full-stack platform with role-based dashboards for Admins, Staff, and Customers, enabling end-to-end repair workflow management.</li>
+                        <li>Developed secure backend APIs with JWT authentication, dynamic inventory management, and bilingual (English/Hindi) support.</li>
+                    </ul>
+                    <div class="project-stack">
+                        <span class="stack-tag">Python</span><span class="stack-tag">JavaScript</span><span class="stack-tag">CSS</span><span class="stack-tag">SQL</span><span class="stack-tag">Web Security (JWT)</span>
+                    </div>
+                </div>
 
-        <!-- EXTRACURRICULAR -->
-        <div class="section">
-            <h2 class="section-title">Extracurricular Activities & Interests</h2>
-            <div class="profiles">
-                <li><strong>Leadership:</strong> Active member of the College Coding Club & Tech Community.</li>
-                <li><strong>Open Source:</strong> Enthusiastic contributor to open-source student repositories.</li>
-                <li><strong>Interests:</strong> Coding, Music, Travelling.</li>
+                <div class="project-item">
+                    <div class="project-title">AI Resume Engine</div>
+                    <ul>
+                        <li>Engineered an AI-powered resume analysis tool with 9 integrated modules covering resume matching, ATS scoring, and career roadmap generation.</li>
+                        <li>Designed an optimized user interface that improved ATS optimization accuracy and reduced resume review time for end-users.</li>
+                    </ul>
+                    <div class="project-stack">
+                        <span class="stack-tag">JavaScript</span><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">AI APIs</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Early Academic Warning System (Dropout Prediction)</div>
+                    <ul>
+                        <li>Designed and trained an ML predictive model to identify at-risk students and forecast potential dropout scenarios with actionable insights.</li>
+                        <li>Processed and analyzed complex student datasets, delivering results via an analytical dashboard for educational administrators.</li>
+                    </ul>
+                    <div class="project-stack">
+                        <span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Personal Portfolio Website</div>
+                    <ul>
+                        <li>Designed and developed a fully responsive personal portfolio website to showcase projects, skills, certifications, and professional profile.</li>
+                        <li>Implemented smooth animations, interactive UI components, and an optimized layout ensuring fast load time and a seamless user experience across all devices.</li>
+                        <li>Integrated contact form and dynamic project cards to enable visitor engagement and highlight key work.</li>
+                    </ul>
+                    <div class="project-stack">
+                        <span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span><span class="stack-tag">React.js</span>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <!-- WORKSHOPS & TRAINING -->
+            <div class="section">
+                <div class="section-title">Workshops &amp; Training</div>
+
+                <div class="project-item">
+                    <div class="workshop-item">
+                        <div class="project-title">Full Stack Development Workshop</div>
+                        <div class="workshop-org">Soft Pro India</div>
+                    </div>
+                    <ul>
+                        <li>Completed an intensive workshop covering front-end (HTML, CSS, JavaScript, React.js) and back-end (Node.js, REST APIs, SQL) development.</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <div class="workshop-item">
+                        <div class="project-title">Alpha — DSA with Java</div>
+                        <div class="workshop-org">AlphaCollege</div>
+                    </div>
+                    <ul>
+                        <li>Completed a structured DSA course in Java mastering arrays, trees, graphs, dynamic programming, and competitive problem-solving.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CERTIFICATIONS -->
+            <div class="section">
+                <div class="section-title">Certifications</div>
+                <div class="cert-grid">
+                    <div class="cert-item">Neural Networks, Computer Vision &amp; NLP <em>(NPTEL)</em></div>
+                    <div class="cert-item">AI Foundations Associate <em>(Oracle)</em></div>
+                    <div class="cert-item">Alpha — DSA with Java <em>(AlphaCollege)</em></div>
+                    <div class="cert-item">Generative AI Studio <em>(Simplilearn)</em></div>
+                    <div class="cert-item">Basics of Data Analytics <em>(Physics Wallah)</em></div>
+                    <div class="cert-item">Databricks for Machine Learning <em>(Simplilearn)</em></div>
+                    <div class="cert-item">Data Visualisation using Python <em>(IBM)</em></div>
+                    <div class="cert-item">Python Essentials (Verified) <em>(CISCO Networking Academy)</em></div>
+                    <div class="cert-item">JavaScript Intermediate <em>(HackerRank)</em></div>
+                </div>
+            </div>
+
+            <!-- CODING PROFILES & ACHIEVEMENTS -->
+            <div class="section">
+                <div class="section-title">Coding Profiles &amp; Achievements</div>
+                <div class="profiles-grid">
+                    <div class="profile-item"><strong>HackerRank:</strong> 5-Star rating in Python, Java &amp; SQL.</div>
+                    <div class="profile-item"><strong>LeetCode:</strong> 100+ algorithmic problems solved.</div>
+                    <div class="profile-item"><strong>CodeChef &amp; Codeforces:</strong> Active competitive programmer.</div>
+                </div>
+            </div>
+
+            <!-- EXTRACURRICULAR -->
+            <div class="section">
+                <div class="section-title">Extracurricular Activities &amp; Interests</div>
+                <div class="profiles-grid">
+                    <div class="profile-item"><strong>Leadership:</strong> Active member of the College Coding Club &amp; Tech Community.</div>
+                    <div class="profile-item"><strong>Open Source:</strong> Contributor to open-source student repositories.</div>
+                    <div class="profile-item"><strong>Interests:</strong> Coding, Music, Travelling.</div>
+                    <div class="profile-item"><strong>Languages:</strong> English, Hindi.</div>
+                </div>
+            </div>
+
+            <div class="resume-footer">
+                kaushallakshya71@gmail.com &nbsp;|&nbsp; +91 8077438455 &nbsp;|&nbsp; Kanpur, India
+            </div>
+
+        </div><!-- end resume-body -->
     </div>
 </body>
 
