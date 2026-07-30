@@ -34,13 +34,26 @@ window.onscroll = () => {
     /*==================== remove toggle on scroll ====================*/
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
+
+    /*==================== scroll progress bar ====================*/
+    const scrollProgress = document.getElementById('scroll-progress');
+    if (scrollProgress) {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        scrollProgress.style.width = progress + '%';
+    }
+
+    /*==================== reveal animations ====================*/
+    reveal();
+    revealTimeline();
 };
 
 /*==================== typed js ====================*/
 const typed = new Typed('.multiple-text', {
     strings: [
         'Full-Stack Developer',
-        'ML &amp; AI Engineer',
+        'ML & AI Engineer',
         'Computer Vision Learner',
         'Competitive Programmer'
     ],
@@ -53,23 +66,90 @@ const typed = new Typed('.multiple-text', {
 /*==================== scroll reveal ====================*/
 function reveal() {
     var reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
-
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
         var elementVisible = 80;
-
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         }
     }
 }
 
-window.addEventListener("scroll", reveal);
+/*==================== timeline reveal ====================*/
+function revealTimeline() {
+    var items = document.querySelectorAll(".timeline-item");
+    for (var i = 0; i < items.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = items[i].getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+            items[i].classList.add("active");
+        }
+    }
+}
 
-// Trigger reveal on load
+/*==================== counter animation ====================*/
+function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    const duration = 1800;
+    const step = target / (duration / 16);
+    let current = 0;
+
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        el.textContent = Math.floor(current);
+    }, 16);
+}
+
+let countersStarted = false;
+function checkCounters() {
+    if (countersStarted) return;
+    const statsRow = document.querySelector('.stats-row');
+    if (!statsRow) return;
+    const top = statsRow.getBoundingClientRect().top;
+    if (top < window.innerHeight - 80) {
+        countersStarted = true;
+        document.querySelectorAll('.stat-num').forEach(el => animateCounter(el));
+    }
+}
+
+window.addEventListener('scroll', checkCounters);
+
+/*==================== dark / light mode toggle ====================*/
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const htmlEl = document.documentElement;
+
+// Load saved preference
+const savedTheme = localStorage.getItem('theme') || 'dark';
+htmlEl.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+    const current = htmlEl.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    htmlEl.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeIcon(next);
+});
+
+function updateThemeIcon(theme) {
+    if (theme === 'light') {
+        themeIcon.className = 'bx bx-sun';
+    } else {
+        themeIcon.className = 'bx bx-moon';
+    }
+}
+
+/*==================== DOMContentLoaded ====================*/
 window.addEventListener('DOMContentLoaded', () => {
     reveal();
+    revealTimeline();
+    checkCounters();
 
     /*==================== live photo change ====================*/
     const photoUpload = document.getElementById('photo-upload');
@@ -80,7 +160,6 @@ window.addEventListener('DOMContentLoaded', () => {
             const file = this.files[0];
             if (!file) return;
 
-            // Only accept images
             if (!file.type.startsWith('image/')) {
                 alert('Please select a valid image file.');
                 return;
@@ -88,7 +167,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const reader = new FileReader();
             reader.onload = function (e) {
-                // Smooth fade-in transition
                 profileImg.style.opacity = '0';
                 profileImg.style.transform = 'scale(0.9)';
 
