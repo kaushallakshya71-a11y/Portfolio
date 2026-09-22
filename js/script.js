@@ -286,6 +286,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    document.querySelectorAll('.cert-card-media').forEach(media => {
+        const triggerOpen = () => {
+            const card = media.closest('.certificate-card');
+            const btn = card ? card.querySelector('.btn-cert-view') : null;
+            if (btn) btn.click();
+        };
+        media.addEventListener('click', (e) => {
+            e.preventDefault();
+            triggerOpen();
+        });
+        media.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                triggerOpen();
+            }
+        });
+    });
+
     if (certModalCloseBtn) {
         certModalCloseBtn.addEventListener('click', () => {
             closeModal(certModal);

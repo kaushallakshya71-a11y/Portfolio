@@ -1368,10 +1368,59 @@ img {
 }
 
 .certificate-card {
-    padding: 2.6rem;
+    padding: 2.4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
+}
+
+.cert-card-media {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-bottom: 1.8rem;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-surface-elevated);
+    position: relative;
+    cursor: pointer;
+}
+
+.cert-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform var(--transition-normal), filter var(--transition-normal);
+}
+
+.cert-card-media:hover img {
+    transform: scale(1.04);
+}
+
+.cert-media-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 12, 20, 0.45);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 600;
+    transition: opacity var(--transition-fast);
+}
+
+.cert-card-media:hover .cert-media-overlay {
+    opacity: 1;
+}
+
+.cert-media-overlay i {
+    font-size: 2rem;
+    color: var(--color-gold);
 }
 
 .cert-icon-box {
@@ -1386,6 +1435,12 @@ img {
     justify-content: center;
     font-size: 2.4rem;
     margin-bottom: 1.8rem;
+}
+
+.cert-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .cert-issuer {
@@ -1412,6 +1467,7 @@ img {
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 2rem;
+    flex: 1;
 }
 
 .btn-cert-view {
@@ -1729,6 +1785,10 @@ img {
 
 .modal-dialog-sm {
     max-width: 540px;
+}
+
+.modal-dialog-cert {
+    max-width: 860px;
 }
 
 .modal-backdrop.open .modal-dialog {
