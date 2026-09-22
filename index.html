@@ -71,6 +71,7 @@
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
                     <li><a href="#certificates" class="nav-link">Certificates</a></li>
                     <li><a href="#resume" class="nav-link">Resume</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -211,7 +212,7 @@
                             </div>
                             <div class="highlight-chip">
                                 <i class='bx bx-code-alt'></i>
-                                <span>100+ LeetCode DSA Solutions</span>
+                                <span>200+ LeetCode DSA Solutions</span>
                             </div>
                             <div class="highlight-chip">
                                 <i class='bx bx-devices'></i>
@@ -238,7 +239,7 @@
                                 </div>
                                 <div class="edu-badge cgpa-badge">
                                     <i class='bx bx-award'></i>
-                                    <span>CGPA: 7.5</span>
+                                    <span>CGPA: 7.0 / 10</span>
                                 </div>
                             </div>
                         </div>
@@ -278,20 +279,19 @@
                 <div class="section-header">
                     <span class="section-tag">Technical Skills</span>
                     <h2 class="section-title">Core Competencies &amp; Technologies</h2>
-                    <p class="section-subtitle">Categorized without fabricated percentages — honest, practical technical stack used in projects.</p>
+                    <p class="section-subtitle">Categorized practical technical stack applied across production and hackathon projects.</p>
                 </div>
 
                 <div class="skills-grid">
-                    <!-- Programming Languages -->
+                    <!-- Programming Languages (C removed) -->
                     <div class="skill-category-card glass-card">
                         <div class="category-header">
                             <div class="cat-icon"><i class='bx bx-code-curly'></i></div>
                             <h3>Programming Languages</h3>
                         </div>
                         <div class="skill-tags">
-                            <span class="skill-pill">Java</span>
                             <span class="skill-pill">Python</span>
-                            <span class="skill-pill">C</span>
+                            <span class="skill-pill">Java</span>
                             <span class="skill-pill">JavaScript (ES6+)</span>
                         </div>
                     </div>
@@ -321,6 +321,7 @@
                             <span class="skill-pill">Node.js</span>
                             <span class="skill-pill">Express.js</span>
                             <span class="skill-pill">FastAPI</span>
+                            <span class="skill-pill">Flask</span>
                             <span class="skill-pill">RESTful APIs</span>
                             <span class="skill-pill">JWT Authentication</span>
                         </div>
@@ -335,7 +336,7 @@
                         <div class="skill-tags">
                             <span class="skill-pill">SQL</span>
                             <span class="skill-pill">MySQL</span>
-                            <span class="skill-pill">SQLite</span>
+                            <span class="skill-pill">SQLite (WAL Mode)</span>
                             <span class="skill-pill">Database Schema Design</span>
                         </div>
                     </div>
@@ -350,7 +351,7 @@
                             <span class="skill-pill">Machine Learning</span>
                             <span class="skill-pill">Natural Language Processing (NLP)</span>
                             <span class="skill-pill">Computer Vision</span>
-                            <span class="skill-pill">Sentence Transformers</span>
+                            <span class="skill-pill">AI Agents</span>
                             <span class="skill-pill">Scikit-Learn</span>
                             <span class="skill-pill">Pandas</span>
                             <span class="skill-pill">NumPy</span>
@@ -381,7 +382,7 @@
                             <span class="skill-pill">Git</span>
                             <span class="skill-pill">GitHub</span>
                             <span class="skill-pill">VS Code</span>
-                            <span class="skill-pill">Streamlit</span>
+                            <span class="skill-pill">Render</span>
                             <span class="skill-pill">Postman</span>
                             <span class="skill-pill">npm</span>
                         </div>
@@ -416,20 +417,21 @@
                         </div>
                         <h3 class="project-title">Mistri – Smart Electronics Repair Management System</h3>
                         <p class="project-desc">
-                            A smart repair management platform designed to connect customers, staff, and administrators while managing repair requests, estimates, status tracking, billing, inventory, and service operations.
+                            An enterprise-grade repair shop management platform designed with 3 role-based dashboards (Admin, Staff, Customer), an 11-stage visual repair timeline, and QR-based job tracking.
                         </p>
                         <ul class="project-features-list">
-                            <li>Role-based dashboards for Admins, Staff, and Customers</li>
-                            <li>AI-assisted repair cost estimation &amp; status tracking</li>
-                            <li>QR-based tracking, UPI payments &amp; GST bill generation</li>
-                            <li>Dynamic inventory management with bilingual (English/Hindi) support</li>
+                            <li>Role-based dashboards for Admins, Staff, and Customers with 11-stage visual timeline</li>
+                            <li>Bilingual AI cost estimator (Hindi/Hinglish NLP) using a RandomForest model mapping 40+ slang terms</li>
+                            <li>Atomic inventory management with low-stock alerts and NPCI-compliant UPI QR billing</li>
+                            <li>GST PDF invoice generation with ReportLab and JWT + RBAC security across 18 database tables</li>
                         </ul>
                         <div class="project-tech-stack">
                             <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Scikit-Learn</span>
+                            <span>SQLite (WAL)</span>
                             <span>JavaScript</span>
-                            <span>SQL</span>
-                            <span>JWT Auth</span>
-                            <span>REST APIs</span>
+                            <span>JWT</span>
                         </div>
                         <div class="project-card-actions">
                             <button class="btn-card btn-view-details" data-project-id="mistri" type="button">
@@ -451,19 +453,20 @@
                         </div>
                         <h3 class="project-title">HireLens – AI Resume &amp; Job Matching Platform</h3>
                         <p class="project-desc">
-                            An AI-powered platform that analyzes resumes against job descriptions and provides matching insights, skill gap analysis, and tailored improvement suggestions.
+                            An AI-powered resume and job description matching tool achieving 95% matching accuracy across 9 integrated modules including ATS scoring, skill gap analysis, and career roadmap generation.
                         </p>
                         <ul class="project-features-list">
-                            <li>Semantic Resume-JD matching with contextual score</li>
+                            <li>Semantic Resume-JD matching with contextual score achieving 95% accuracy</li>
                             <li>9-module analysis covering ATS keyword &amp; skill gap audit</li>
                             <li>Tailored resume improvement and career roadmap suggestions</li>
-                            <li>Database tracking for multi-candidate evaluation</li>
+                            <li>Deployed on Render as a live production application for job seekers</li>
                         </ul>
                         <div class="project-tech-stack">
-                            <span>Python / JS</span>
-                            <span>NLP</span>
-                            <span>Sentence Transformers</span>
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
                             <span>AI APIs</span>
+                            <span>REST APIs</span>
                             <span>Node.js</span>
                         </div>
                         <div class="project-card-actions">
@@ -482,28 +485,28 @@
                         </div>
                     </article>
 
-                    <!-- Project 3: Buy or Wait? -->
+                    <!-- Project 3: Buy-and-Wait -->
                     <article class="project-card glass-card" data-category="ai-ml web-dev" data-project="buyorwait">
                         <div class="project-card-header">
-                            <div class="project-category-badge">AI Decision System</div>
+                            <div class="project-category-badge">HackerRank Orchestrate Hackathon</div>
                             <span class="project-order">03</span>
                         </div>
-                        <h3 class="project-title">Buy or Wait? – AI Financial Decision Assistant</h3>
+                        <h3 class="project-title">Buy-and-Wait – AI Financial Decision Agent</h3>
                         <p class="project-desc">
-                            An AI-based financial assistant that analyzes planned purchases against available balance, expected income, recurring bills, and pending payments to provide an affordability assessment.
+                            An AI-powered financial decision agent developed in a 24-hour hackathon that determines whether a user can safely afford an expense by analyzing recurring payments, income, and payment options.
                         </p>
                         <ul class="project-features-list">
-                            <li>Data-driven expense affordability assessment</li>
-                            <li>Income vs. recurring expense analysis to compute safe spend limit</li>
-                            <li>Structured payment scheduling and purchase planning</li>
-                            <li>Actionable spending adjustment suggestions (non-advisory)</li>
+                            <li>Data-driven expense affordability assessment and cash flow analysis</li>
+                            <li>Processed 250 financial requests across multi-source CSV datasets (profiles, events, exchange rates, images)</li>
+                            <li>Generates personalized buy/wait/installment recommendations with clear rationale</li>
+                            <li>Ranked #1927 out of 3,062 participants in HackerRank's Orchestrate AI Agent competition</li>
                         </ul>
                         <div class="project-tech-stack">
                             <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>React.js / JS</span>
-                            <span>Rule/ML Logic</span>
-                            <span>SQLite</span>
+                            <span>AI/ML</span>
+                            <span>Pandas</span>
+                            <span>Data Processing</span>
+                            <span>Financial Modeling</span>
                         </div>
                         <div class="project-card-actions">
                             <button class="btn-card btn-view-details" data-project-id="buyorwait" type="button">
@@ -517,66 +520,31 @@
                         </div>
                     </article>
 
-                    <!-- Project 4: AgroScan -->
-                    <article class="project-card glass-card" data-category="ai-ml full-stack" data-project="agroscan">
-                        <div class="project-card-header">
-                            <div class="project-category-badge">Computer Vision &amp; AI</div>
-                            <span class="project-order">04</span>
-                        </div>
-                        <h3 class="project-title">AgroScan – AI-Based Plant &amp; Soil Analysis</h3>
-                        <p class="project-desc">
-                            An agricultural intelligence tool leveraging machine learning and computer vision to identify crop leaf diseases and evaluate soil suitability for optimal yields.
-                        </p>
-                        <ul class="project-features-list">
-                            <li>Image-based crop disease classification via Computer Vision</li>
-                            <li>Soil texture and nutrient characteristic assessment</li>
-                            <li>Actionable crop care recommendations</li>
-                            <li>Bilingual interface support (Hindi &amp; English) with FastAPI backend</li>
-                        </ul>
-                        <div class="project-tech-stack">
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>Computer Vision</span>
-                            <span>Scikit-Learn</span>
-                            <span>Streamlit / Web</span>
-                        </div>
-                        <div class="project-card-actions">
-                            <button class="btn-card btn-view-details" data-project-id="agroscan" type="button">
-                                <i class='bx bx-info-circle'></i>
-                                <span>View Details</span>
-                            </button>
-                            <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" class="btn-card btn-code" title="View Source on GitHub">
-                                <i class='bx bxl-github'></i>
-                                <span>Code</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Project 5: Early Academic Warning System -->
-                    <article class="project-card glass-card" data-category="ai-ml" data-project="academicwarning">
+                    <!-- Project 4: StudentPlus (Renamed from Early Academic Warning System) -->
+                    <article class="project-card glass-card" data-category="ai-ml" data-project="studentplus">
                         <div class="project-card-header">
                             <div class="project-category-badge">Predictive Analytics</div>
-                            <span class="project-order">05</span>
+                            <span class="project-order">04</span>
                         </div>
-                        <h3 class="project-title">Early Academic Warning System – Dropout Prediction</h3>
+                        <h3 class="project-title">StudentPlus – ML-Based Dropout Prediction &amp; Early Warning System</h3>
                         <p class="project-desc">
-                            An ML predictive classification model and administrator dashboard that identifies students at risk of academic failure and forecasts dropout likelihood with actionable retention insights.
+                            A predictive machine learning classification system and analytical dashboard that identifies students at risk of academic failure and forecasts potential dropout scenarios with actionable retention insights.
                         </p>
                         <ul class="project-features-list">
-                            <li>Supervised classification model trained on academic indicators</li>
-                            <li>Early risk stratification for timely counselor interventions</li>
-                            <li>Administrative visual analytics dashboard</li>
-                            <li>Evaluated using precision-recall and ROC-AUC metrics</li>
+                            <li>Supervised classification model trained on academic indicators to predict dropout risk</li>
+                            <li>Processed and analyzed complex student datasets with actionable retention recommendations</li>
+                            <li>Administrative visual dashboard for educators to monitor student performance trajectories</li>
+                            <li>Evaluated across precision-recall and longitudinal metric benchmarks</li>
                         </ul>
                         <div class="project-tech-stack">
                             <span>Python</span>
                             <span>Scikit-Learn</span>
                             <span>Pandas</span>
                             <span>NumPy</span>
-                            <span>Analytical UI</span>
+                            <span>Machine Learning</span>
                         </div>
                         <div class="project-card-actions">
-                            <button class="btn-card btn-view-details" data-project-id="academicwarning" type="button">
+                            <button class="btn-card btn-view-details" data-project-id="studentplus" type="button">
                                 <i class='bx bx-info-circle'></i>
                                 <span>View Details</span>
                             </button>
@@ -587,21 +555,21 @@
                         </div>
                     </article>
 
-                    <!-- Project 6: Responsive Developer Portfolio -->
+                    <!-- Project 5: Responsive Developer Portfolio -->
                     <article class="project-card glass-card" data-category="web-dev" data-project="portfolio">
                         <div class="project-card-header">
                             <div class="project-category-badge">Web Engineering</div>
-                            <span class="project-order">06</span>
+                            <span class="project-order">05</span>
                         </div>
                         <h3 class="project-title">Personal Developer Portfolio – Modern 2026 Edition</h3>
                         <p class="project-desc">
-                            A performant, accessible personal portfolio website engineered to present software projects, verified credentials, and technical competence to engineering recruiters.
+                            A performant, accessible developer portfolio website engineered with pure HTML5, CSS3, and JavaScript featuring dual theme engine (Dark &amp; Light) and interactive project modals.
                         </p>
                         <ul class="project-features-list">
                             <li>Semantic HTML5, CSS3 Custom Properties &amp; vanilla JavaScript</li>
-                            <li>Dual-mode persistent color system (Dark &amp; Light)</li>
-                            <li>Custom modal system, scroll depth tracking &amp; mobile drawer</li>
-                            <li>Zero external heavy UI frameworks for optimal Core Web Vitals</li>
+                            <li>Dual-mode persistent color system (Dark &amp; Light) with WCAG AA compliance</li>
+                            <li>Custom modal system, scroll depth tracking &amp; mobile navigation drawer</li>
+                            <li>Zero external heavy UI frameworks for optimal load performance and Core Web Vitals</li>
                         </ul>
                         <div class="project-tech-stack">
                             <span>HTML5</span>
@@ -634,54 +602,56 @@
                 <div class="section-header">
                     <span class="section-tag">Career History</span>
                     <h2 class="section-title">Experience &amp; Internships</h2>
-                    <p class="section-subtitle">Clearly distinguishing academic internships, virtual industry simulations, and training.</p>
+                    <p class="section-subtitle">Verified internships, virtual enterprise simulations, and professional training programs.</p>
                 </div>
 
                 <div class="experience-timeline">
-                    <!-- Item 1: IBM SkillsBuild -->
+                    <!-- Item 1: Walmart Global Tech -->
                     <div class="timeline-row">
                         <div class="timeline-node">
                             <div class="node-bullet"></div>
                         </div>
                         <div class="timeline-card glass-card">
                             <div class="card-badge-row">
-                                <span class="badge-role-type badge-internship">Academic Internship</span>
-                                <span class="badge-date"><i class='bx bx-calendar'></i> Verified Program</span>
+                                <span class="badge-role-type badge-virtual">Virtual Internship</span>
+                                <span class="badge-date"><i class='bx bx-calendar'></i> July 2026 | Remote (Forage)</span>
                             </div>
-                            <h3 class="exp-title">Data Analytics with AI – Academic Intern</h3>
-                            <h4 class="exp-company">IBM SkillsBuild</h4>
+                            <h3 class="exp-title">Advanced Software Engineering Virtual Internship</h3>
+                            <h4 class="exp-company">Walmart Global Tech</h4>
                             <p class="exp-summary">
-                                Applied foundational machine learning, predictive analytics, and statistical data visualization pipelines on industry-modeled datasets. Built analytical dashboards and data pipelines using Python, Pandas, and visualization libraries.
+                                Completed Walmart Global Tech's job simulation designing scalable data storage solutions using advanced data structures and heap algorithms for optimized item storage across multiple store departments. Worked on software architecture using UML class diagrams, implemented data processors with Java generics, and applied design patterns (Abstract Factory) for a real-world retail engineering scenario.
+                            </p>
+                            <div class="exp-tags">
+                                <span>Software Engineering</span>
+                                <span>Java Generics</span>
+                                <span>Heap Algorithms</span>
+                                <span>Design Patterns</span>
+                                <span>UML</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: IBM SkillsBuild -->
+                    <div class="timeline-row">
+                        <div class="timeline-node">
+                            <div class="node-bullet"></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <div class="card-badge-row">
+                                <span class="badge-role-type badge-internship">Academic Virtual Intern</span>
+                                <span class="badge-date"><i class='bx bx-calendar'></i> Aug – Sept 2026 | Remote</span>
+                            </div>
+                            <h3 class="exp-title">Data Analytics with AI Virtual Intern</h3>
+                            <h4 class="exp-company">IBM SkillsBuild &bull; AICTE &bull; BharatCares</h4>
+                            <p class="exp-summary">
+                                Selected for the 6-week IBM SkillsBuild Data Analytics with AI Internship 2026 (ID: IBMUEDA6013), offered in collaboration with AICTE — aligned with UN Sustainable Development Goals (UN SDGs). Built capabilities in data analytics, predictive modeling, and AI-driven insights using statistical techniques and machine learning algorithms applied to real-world project scenarios. Completed expert-led masterclasses by Subject Matter Experts (SMEs).
                             </p>
                             <div class="exp-tags">
                                 <span>Data Analytics</span>
                                 <span>Python</span>
                                 <span>Machine Learning</span>
-                                <span>IBM SkillsBuild</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 2: GrowMore Digital -->
-                    <div class="timeline-row">
-                        <div class="timeline-node">
-                            <div class="node-bullet"></div>
-                        </div>
-                        <div class="timeline-card glass-card">
-                            <div class="card-badge-row">
-                                <span class="badge-role-type badge-internship">Internship</span>
-                                <span class="badge-date"><i class='bx bx-calendar'></i> Industry Experience</span>
-                            </div>
-                            <h3 class="exp-title">Full Stack Developer Intern</h3>
-                            <h4 class="exp-company">GrowMore Digital</h4>
-                            <p class="exp-summary">
-                                Developed responsive frontend interfaces with modern JavaScript, HTML5, and CSS3. Collaborated on RESTful API endpoint integration, form validation, and cross-browser testing for web applications.
-                            </p>
-                            <div class="exp-tags">
-                                <span>Full-Stack Development</span>
-                                <span>JavaScript</span>
-                                <span>Frontend UI</span>
-                                <span>REST APIs</span>
+                                <span>Predictive Modeling</span>
+                                <span>AICTE &amp; IBM</span>
                             </div>
                         </div>
                     </div>
@@ -694,64 +664,19 @@
                         <div class="timeline-card glass-card">
                             <div class="card-badge-row">
                                 <span class="badge-role-type badge-training">Industrial Training</span>
-                                <span class="badge-date"><i class='bx bx-calendar'></i> 2024</span>
+                                <span class="badge-date"><i class='bx bx-calendar'></i> Nov 2025 | Kanpur (On-site)</span>
                             </div>
-                            <h3 class="exp-title">Full Stack Web Development – Industrial Training</h3>
-                            <h4 class="exp-company">Soft Pro India</h4>
+                            <h3 class="exp-title">Full Stack Web Development Workshop &amp; Training</h3>
+                            <h4 class="exp-company">SoftPro India Computer Technologies</h4>
                             <p class="exp-summary">
-                                Completed hands-on industrial training covering client-side architectures (HTML5, CSS3, JavaScript, React.js) and server-side components (Node.js, Express, REST APIs, SQL databases). Engineered full-stack modules with authentication and database persistence.
+                                Completed intensive hands-on workshop covering front-end (HTML, CSS, JavaScript, React.js) and back-end (Node.js, REST APIs, SQL) development with real-world project building and live deployment workflows.
                             </p>
                             <div class="exp-tags">
                                 <span>React.js</span>
                                 <span>Node.js</span>
+                                <span>REST APIs</span>
                                 <span>SQL</span>
-                                <span>Express</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 4: Deloitte Virtual Experience -->
-                    <div class="timeline-row">
-                        <div class="timeline-node">
-                            <div class="node-bullet"></div>
-                        </div>
-                        <div class="timeline-card glass-card">
-                            <div class="card-badge-row">
-                                <span class="badge-role-type badge-virtual">Virtual Experience</span>
-                                <span class="badge-date"><i class='bx bx-check-circle'></i> Simulation Completed</span>
-                            </div>
-                            <h3 class="exp-title">Technology Job Simulation</h3>
-                            <h4 class="exp-company">Deloitte Technology</h4>
-                            <p class="exp-summary">
-                                Completed simulation modules reflecting practical technology consulting: business requirement analysis, technical feasibility assessment, and technology modernization strategies for client infrastructure.
-                            </p>
-                            <div class="exp-tags">
-                                <span>Tech Consulting</span>
-                                <span>Architecture Analysis</span>
-                                <span>Problem Solving</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 5: Walmart Global Tech Virtual Experience -->
-                    <div class="timeline-row">
-                        <div class="timeline-node">
-                            <div class="node-bullet"></div>
-                        </div>
-                        <div class="timeline-card glass-card">
-                            <div class="card-badge-row">
-                                <span class="badge-role-type badge-virtual">Virtual Experience</span>
-                                <span class="badge-date"><i class='bx bx-check-circle'></i> Simulation Completed</span>
-                            </div>
-                            <h3 class="exp-title">Advanced Software Engineering Job Simulation</h3>
-                            <h4 class="exp-company">Walmart Global Tech</h4>
-                            <p class="exp-summary">
-                                Engaged in simulated enterprise software engineering tasks including data structures optimization, relational database queries for high-volume transactions, and software design principles.
-                            </p>
-                            <div class="exp-tags">
-                                <span>Software Engineering</span>
-                                <span>DSA Optimization</span>
-                                <span>Relational Data</span>
+                                <span>Full-Stack</span>
                             </div>
                         </div>
                     </div>
@@ -765,33 +690,33 @@
                 <div class="section-header">
                     <span class="section-tag">Verified Milestones</span>
                     <h2 class="section-title">Coding Profiles &amp; Achievements</h2>
-                    <p class="section-subtitle">Quantifiable achievements on competitive coding platforms.</p>
+                    <p class="section-subtitle">Quantifiable achievements on competitive coding platforms and hackathons.</p>
                 </div>
 
-                <!-- Verified Stats Row -->
+                <!-- Verified Stats Row (200+ LeetCode) -->
                 <div class="stats-counter-row">
                     <div class="stat-box glass-card">
-                        <span class="stat-figure" data-target="100">0</span><span class="stat-symbol">+</span>
+                        <span class="stat-figure" data-target="200">0</span><span class="stat-symbol">+</span>
                         <span class="stat-title">LeetCode Solved</span>
-                        <p class="stat-desc">Sharpening algorithms &amp; data structures</p>
+                        <p class="stat-desc">200+ algorithmic problems solved across key data structure topics</p>
                     </div>
 
                     <div class="stat-box glass-card">
                         <span class="stat-figure" data-target="5">0</span><span class="stat-symbol">★</span>
                         <span class="stat-title">HackerRank Rating</span>
-                        <p class="stat-desc">Top 5-Star badges in Python, Java &amp; SQL</p>
+                        <p class="stat-desc">5-Star Gold badges in Python, Java &amp; SQL tracks</p>
                     </div>
 
                     <div class="stat-box glass-card">
-                        <span class="stat-figure" data-target="9">0</span><span class="stat-symbol"></span>
+                        <span class="stat-figure" data-target="10">0</span><span class="stat-symbol"></span>
                         <span class="stat-title">Technical Certifications</span>
-                        <p class="stat-desc">Verified credentials from NPTEL, Oracle, IBM, Cisco</p>
+                        <p class="stat-desc">Credentials from HackerRank, NPTEL, Oracle, IBM, Cisco</p>
                     </div>
 
                     <div class="stat-box glass-card">
-                        <span class="stat-figure" data-target="5">0</span><span class="stat-symbol">+</span>
-                        <span class="stat-title">Applications Built</span>
-                        <p class="stat-desc">End-to-end full-stack and machine learning systems</p>
+                        <span class="stat-figure" data-target="2">0</span><span class="stat-symbol"></span>
+                        <span class="stat-title">Live Deployed Apps</span>
+                        <p class="stat-desc">Production applications actively accessible on Render</p>
                     </div>
                 </div>
 
@@ -801,10 +726,10 @@
                             <i class='bx bxl-codepen platform-icon'></i>
                             <div>
                                 <h3>HackerRank</h3>
-                                <span class="platform-tag">5-Star Gold Badge</span>
+                                <span class="platform-tag">5-Star Badges &bull; Orchestrate Hackathon</span>
                             </div>
                         </div>
-                        <p>Consistent high ratings across Python, Java, and SQL domain tracks demonstrating strong syntax command and query efficiency.</p>
+                        <p>5-Star rating across Python, Java, and SQL. Completed HackerRank's Orchestrate AI Agent hackathon building an autonomous financial decision agent.</p>
                     </div>
 
                     <div class="platform-card glass-card">
@@ -812,21 +737,21 @@
                             <i class='bx bx-code-alt platform-icon'></i>
                             <div>
                                 <h3>LeetCode</h3>
-                                <span class="platform-tag">100+ Problems</span>
+                                <span class="platform-tag">200+ Problems Solved</span>
                             </div>
                         </div>
-                        <p>Practicing algorithmic techniques across arrays, strings, two pointers, hashing, linked lists, trees, and dynamic programming.</p>
+                        <p>Solved 200+ algorithmic problems covering arrays, two pointers, sliding window, binary search, trees, graphs, and dynamic programming.</p>
                     </div>
 
                     <div class="platform-card glass-card">
                         <div class="platform-header">
                             <i class='bx bx-terminal platform-icon'></i>
                             <div>
-                                <h3>CodeChef &amp; Competitive Platforms</h3>
+                                <h3>CodeChef &amp; Codeforces</h3>
                                 <span class="platform-tag">Contest Participant</span>
                             </div>
                         </div>
-                        <p>Participating in timed algorithmic problem-solving contests to develop efficient logic under execution constraints.</p>
+                        <p>Active competitive programmer participating in timed rounds to build optimal solutions under constrained memory and runtime limits.</p>
                     </div>
                 </div>
             </div>
@@ -838,11 +763,27 @@
                 <div class="section-header">
                     <span class="section-tag">Credentials</span>
                     <h2 class="section-title">Certifications &amp; Courses</h2>
-                    <p class="section-subtitle">Verified technical programs completed from established institutes and industry leaders.</p>
+                    <p class="section-subtitle">Verified technical programs completed from established institutes, industry leaders, and hackathons.</p>
                 </div>
 
                 <div class="certificates-grid">
-                    <!-- Cert 1 -->
+                    <!-- Cert 1: HackerRank Orchestrate (New) -->
+                    <div class="certificate-card glass-card highlight-cert">
+                        <div class="cert-icon-box">
+                            <i class='bx bx-trophy'></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer">HackerRank Orchestrate</span>
+                            <h3 class="cert-title">AI Agent Hackathon — Orchestrate 2026</h3>
+                            <p class="cert-note">Awarded for building and deploying an autonomous AI decision agent (Buy-and-Wait). Ranked <strong>#1927 / 3,062</strong> participants.</p>
+                        </div>
+                        <button class="btn-cert-view" data-cert-title="HackerRank Orchestrate — AI Agent Hackathon (Sept 2026)" data-cert-issuer="HackerRank" data-cert-image="assets/hackerrank_orchestrate.jpg" data-cert-desc="Awarded to Kaushal Lakshya for participating in the September 2026 edition of HackerRank's Orchestrate by building and deploying an AI agent. Final Rank: #1927 / 3,062. Verified by HackerRank." type="button">
+                            <span>View Certificate</span>
+                            <i class='bx bx-image-alt'></i>
+                        </button>
+                    </div>
+
+                    <!-- Cert 2: NPTEL -->
                     <div class="certificate-card glass-card">
                         <div class="cert-icon-box">
                             <i class='bx bx-badge-check'></i>
@@ -858,7 +799,7 @@
                         </button>
                     </div>
 
-                    <!-- Cert 2 -->
+                    <!-- Cert 3: Oracle -->
                     <div class="certificate-card glass-card">
                         <div class="cert-icon-box">
                             <i class='bx bx-badge-check'></i>
@@ -874,13 +815,13 @@
                         </button>
                     </div>
 
-                    <!-- Cert 3 -->
+                    <!-- Cert 4: AlphaCollege -->
                     <div class="certificate-card glass-card">
                         <div class="cert-icon-box">
                             <i class='bx bx-badge-check'></i>
                         </div>
                         <div class="cert-body">
-                            <span class="cert-issuer">AlphaCollege</span>
+                            <span class="cert-issuer">AlphaCollege (Apna College)</span>
                             <h3 class="cert-title">Alpha — DSA with Java</h3>
                             <p class="cert-note">Intensive Data Structures &amp; Algorithms curriculum in Java covering data abstractions, trees, and dynamic programming.</p>
                         </div>
@@ -890,7 +831,7 @@
                         </button>
                     </div>
 
-                    <!-- Cert 4 -->
+                    <!-- Cert 5: IBM -->
                     <div class="certificate-card glass-card">
                         <div class="cert-icon-box">
                             <i class='bx bx-badge-check'></i>
@@ -906,7 +847,7 @@
                         </button>
                     </div>
 
-                    <!-- Cert 5 -->
+                    <!-- Cert 6: Cisco -->
                     <div class="certificate-card glass-card">
                         <div class="cert-icon-box">
                             <i class='bx bx-badge-check'></i>
@@ -922,7 +863,7 @@
                         </button>
                     </div>
 
-                    <!-- Cert 6 -->
+                    <!-- Cert 7: HackerRank JS -->
                     <div class="certificate-card glass-card">
                         <div class="cert-icon-box">
                             <i class='bx bx-badge-check'></i>
@@ -938,7 +879,7 @@
                         </button>
                     </div>
 
-                    <!-- Cert 7 -->
+                    <!-- Cert 8: Simplilearn GenAI -->
                     <div class="certificate-card glass-card">
                         <div class="cert-icon-box">
                             <i class='bx bx-badge-check'></i>
@@ -954,7 +895,7 @@
                         </button>
                     </div>
 
-                    <!-- Cert 8 -->
+                    <!-- Cert 9: Simplilearn Databricks -->
                     <div class="certificate-card glass-card">
                         <div class="cert-icon-box">
                             <i class='bx bx-badge-check'></i>
@@ -970,7 +911,7 @@
                         </button>
                     </div>
 
-                    <!-- Cert 9 -->
+                    <!-- Cert 10: Physics Wallah -->
                     <div class="certificate-card glass-card">
                         <div class="cert-icon-box">
                             <i class='bx bx-badge-check'></i>
@@ -1007,7 +948,7 @@
                             <h3>Lakshya Kaushal – Official Technical Resume</h3>
                             <p class="resume-meta">Format: Clean A4 Printable Document | Updated 2026</p>
                             <p class="resume-summary-note">
-                                Contains verified academic record (B.Tech CSE - AI &amp; ML, CGPA: 7.5), complete skills matrix, full-stack &amp; ML projects, certifications, and direct contact details.
+                                Contains verified academic record (B.Tech CSE - AI &amp; ML, CGPA: 7.0), 200+ LeetCode problems, full-stack &amp; ML projects, Walmart &amp; IBM internships, HackerRank Orchestrate certificate, and direct contact details.
                             </p>
                         </div>
                     </div>
@@ -1102,6 +1043,7 @@
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#experience">Experience</a>
+                    <a href="#achievements">Achievements</a>
                     <a href="#certificates">Certificates</a>
                     <a href="#resume">Resume</a>
                     <a href="#contact">Contact</a>
@@ -1141,7 +1083,7 @@
         </div>
     </div>
 
-    <!-- ===== CERTIFICATE DETAILS MODAL ===== -->
+    <!-- ===== CERTIFICATE DETAILS / LIGHTBOX MODAL ===== -->
     <div class="modal-backdrop" id="cert-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title">
         <div class="modal-dialog modal-dialog-sm">
             <button class="modal-close-btn" id="modal-cert-close-btn" type="button" aria-label="Close Certificate Dialog">

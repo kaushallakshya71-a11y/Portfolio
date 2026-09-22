@@ -124,17 +124,17 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Mistri – Smart Electronics Repair Management System',
             category: 'Full-Stack Platform',
             problem: 'Local electronics and device repair businesses frequently suffer from unorganized repair workflows, lack of transparent tracking for customers, manual invoice generation, and disconnected parts inventory.',
-            solution: 'Engineered a unified, multi-tiered web platform providing dedicated role-based interfaces for Customers, Service Technicians, and Business Administrators to manage device repair tickets from reception to dispatch.',
+            solution: 'Engineered an enterprise-grade full-stack repair shop platform providing dedicated role-based interfaces for Admins, Staff Technicians, and Customers to manage repair tickets from reception to dispatch.',
             features: [
-                'Role-Based Portals: Tailored views and permissions for Admins, Staff Technicians, and End Customers.',
-                'AI-Based Cost Estimation: Automated preliminary diagnostics and price range estimation.',
-                'QR Code & Real-Time Tracking: Instant status verification for walk-in and pickup requests.',
-                'Integrated Billing & UPI: GST-compliant invoice generation and frictionless digital payments.',
-                'Inventory Management: Real-time stock decrementing and low-stock alerts for replacement components.',
-                'Bilingual Localization: Complete dual-language support in English and Hindi for regional accessibility.'
+                'Role-Based Portals: Tailored views and permissions for Admins, Staff, and Customers with an 11-stage visual repair timeline.',
+                'Bilingual AI Cost Estimator: RandomForest ML model with custom regex normalizer mapping 40+ Hinglish slang terms to diagnostic keywords, achieving sub-millisecond offline inference.',
+                'QR Code & Real-Time Tracking: Instant job card verification for walk-in and pickup requests.',
+                'Atomic Inventory Management: Stock deduction guards, low-stock alerts, and NPCI-compliant UPI QR billing.',
+                'Automated Billing: GST PDF invoice generation using ReportLab.',
+                'Security: JWT + RBAC security across 18 database tables (14/14 tests passing).'
             ],
-            techStack: ['Python', 'JavaScript', 'SQL / MySQL', 'JWT Authentication', 'REST APIs', 'HTML5/CSS3'],
-            contribution: 'Architected the relational schema, developed secure RESTful endpoints with JWT session management, created responsive dashboard interfaces, and implemented automated bill generation logic.',
+            techStack: ['Python', 'FastAPI', 'Scikit-Learn', 'SQLite (WAL Mode)', 'JavaScript', 'JWT', 'ReportLab'],
+            contribution: 'Architected the relational schema across 18 tables, trained the NLP cost-estimation model, developed secure RESTful endpoints with JWT + RBAC, created responsive dashboard interfaces, and implemented automated GST invoice generation.',
             githubUrl: 'https://github.com/kaushallakshya71-a11y',
             liveUrl: null
         },
@@ -144,60 +144,45 @@ document.addEventListener('DOMContentLoaded', () => {
             problem: 'Job seekers often face high ATS rejection rates due to formatting anomalies and keyword mismatches, while lacking actionable guidance on specific missing technical competencies.',
             solution: 'Constructed an intelligent resume auditing and matching platform that semantically evaluates resumes against target job descriptions, delivering precise fit scores and improvement roadmaps.',
             features: [
-                'Semantic Context Matching: Evaluates candidate experience relevance using Sentence Transformers and NLP beyond simple keyword matching.',
+                'Semantic Context Matching: Evaluates candidate experience relevance using NLP achieving 95% matching accuracy across 9 integrated modules.',
                 '9-Module ATS Diagnostic Suite: Comprehensive analysis covering formatting, action verbs, keyword densities, and section completeness.',
                 'Skill Gap & Career Roadmap: Pinpoints missing credentials and suggests actionable learning paths.',
-                'Multi-Candidate Database Tracking: Enables reviewing match history and comparing resumes across diverse job roles.'
+                'Live Deployment: Actively deployed on Render for real-world end-user access.'
             ],
-            techStack: ['Python / JS', 'NLP', 'Sentence Transformers', 'AI APIs', 'Node.js', 'Express', 'HTML5/CSS3'],
+            techStack: ['JavaScript', 'HTML5', 'CSS3', 'AI APIs', 'REST APIs', 'Node.js', 'Render'],
             contribution: 'Engineered the resume parsing and feature extraction modules, integrated semantic scoring algorithms, designed the frontend results dashboard, and deployed the production instance on Render.',
             githubUrl: 'https://github.com/kaushallakshya71-a11y',
             liveUrl: 'https://resumematch-ai-1.onrender.com'
         },
         buyorwait: {
-            title: 'Buy or Wait? – AI Financial Decision Assistant',
-            category: 'AI Decision Support System',
-            problem: 'Consumers routinely struggle with impulsive purchase decisions without clear visibility into how a discretionary expense impacts their pending liabilities and upcoming monthly obligations.',
-            solution: 'Developed an objective financial decision support tool that models cash flow parameters—current balance, expected income, recurring bills, and pending dues—to provide an immediate, data-backed purchase affordability index.',
+            title: 'Buy-and-Wait – AI Financial Decision Agent',
+            category: 'HackerRank Orchestrate Hackathon',
+            problem: 'Consumers routinely struggle with impulsive purchase decisions without clear visibility into how a discretionary expense impacts their pending liabilities, cash flow, and upcoming monthly obligations.',
+            solution: 'Developed an AI-powered financial decision agent in a 24-hour hackathon that determines whether a user can safely afford a requested expense by analyzing recurring payments, pending transactions, income, and payment options.',
             features: [
-                'Purchase Affordability Scoring: Evaluates immediate and deferred financial impact of a desired purchase.',
-                'Cash Flow & Safe-Spend Computation: Calculates genuine discretionary liquidity after deducting fixed obligations.',
-                'Purchase Planning & Postponement Guidance: Suggests optimal waiting periods and monthly reserve targets.',
-                'Non-Advisory Guardrails: Formatted purely as an analytical tool without speculative financial counseling.'
+                'Purchase Affordability Scoring: Evaluates immediate and deferred financial impact of requested expenses.',
+                'Multi-Source Data Processing: Ingested and processed 250 financial requests across CSV datasets (financial profiles, events, exchange rates, messages, images).',
+                'Personalized Guidance: Generates tailored buy/wait/installment recommendations with clear contextual rationale.',
+                'Competitive Achievement: Ranked #1927 out of 3,062 participants in HackerRank Orchestrate AI Agent Hackathon.'
             ],
-            techStack: ['Python', 'FastAPI', 'React.js / JavaScript', 'Rule-Based & ML Logic', 'SQLite'],
-            contribution: 'Developed the financial projection algorithm, created lightweight FastAPI backend services, structured SQLite schema for recurring cash flow items, and built the clean interactive client UI.',
+            techStack: ['Python', 'AI/ML', 'Pandas', 'Data Processing', 'Financial Modeling'],
+            contribution: 'Engineered the core decision logic and risk rating algorithms, parsed multi-modal financial request datasets, calculated safe spending boundaries, and verified model decision outputs under timed hackathon constraints.',
             githubUrl: 'https://github.com/kaushallakshya71-a11y',
             liveUrl: null
         },
-        agroscan: {
-            title: 'AgroScan – AI-Based Plant & Soil Analysis',
-            category: 'Computer Vision & AgriTech',
-            problem: 'Smallholder farmers and gardeners lack rapid, accessible diagnostic tools to identify early-stage crop infections and determine whether local soil conditions suit target crop varieties.',
-            solution: 'Engineered an AI diagnostic application leveraging computer vision convolutional neural networks to classify leaf lesions from photos and evaluate soil textural parameters.',
-            features: [
-                'Leaf Pathology Detection: Identifies plant diseases from smartphone-captured leaf imagery.',
-                'Soil Quality & Texture Assessment: Evaluates suitability indicators for key crop categories.',
-                'Localized Agronomic Guidance: Actionable remedy suggestions and prevention steps.',
-                'Bilingual Usability: Interface designed for vernacular accessibility with English and Hindi options.'
-            ],
-            techStack: ['Python', 'FastAPI', 'Computer Vision', 'Scikit-Learn', 'Streamlit / Web'],
-            contribution: 'Preprocessed crop pathology image datasets, implemented model inference pipelines using FastAPI, and connected the detection engine to a streamlined web interface.',
-            githubUrl: 'https://github.com/kaushallakshya71-a11y',
-            liveUrl: null
-        },
-        academicwarning: {
-            title: 'Early Academic Warning System – Dropout Prediction',
+        studentplus: {
+            title: 'StudentPlus – ML-Based Dropout Prediction & Early Warning System',
             category: 'Predictive Analytics',
             problem: 'Educational institutions struggle to identify at-risk students until exam failures or formal dropout notices occur, missing opportunities for timely academic remediation.',
             solution: 'Trained and deployed a machine learning classification pipeline that monitors longitudinal student engagement metrics to predict dropout risk well in advance.',
             features: [
                 'Predictive Risk Stratification: Assigns calibrated probability scores indicating academic distress.',
                 'Multivariate Feature Processing: Analyzes attendance patterns, assignment submissions, and assessment trajectories.',
-                'Administrator Visual Dashboard: Interactive charts enabling academic advisors to prioritize student interventions.'
+                'Administrator Visual Dashboard: Interactive charts enabling academic advisors to prioritize student interventions.',
+                'Evaluated Benchmarks: Tested across precision-recall and longitudinal metric benchmarks.'
             ],
-            techStack: ['Python', 'Scikit-Learn', 'Pandas', 'NumPy', 'Analytical UI'],
-            contribution: 'Cleaned and normalized tabular academic data, conducted feature importance analysis, evaluated multiple classifiers (Random Forest, Logistic Regression), and delivered clear metric visualizations.',
+            techStack: ['Python', 'Scikit-Learn', 'Pandas', 'NumPy', 'Machine Learning'],
+            contribution: 'Cleaned and normalized tabular academic data, conducted feature importance analysis, evaluated multiple classifiers, and delivered clear metric visualizations.',
             githubUrl: 'https://github.com/kaushallakshya71-a11y',
             liveUrl: null
         },
@@ -282,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       4. CERTIFICATE MODAL
+       4. CERTIFICATE MODAL WITH IMAGE LIGHTBOX SUPPORT
        ========================================================================== */
     const certModal = document.getElementById('cert-modal');
     const certModalContent = document.getElementById('modal-cert-content');
@@ -294,8 +279,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const title = btn.getAttribute('data-cert-title');
             const issuer = btn.getAttribute('data-cert-issuer');
             const desc = btn.getAttribute('data-cert-desc');
+            const image = btn.getAttribute('data-cert-image');
 
-            renderCertModal(title, issuer, desc);
+            renderCertModal(title, issuer, desc, image);
             openModal(certModal);
         });
     });
@@ -306,14 +292,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function renderCertModal(title, issuer, desc) {
+    function renderCertModal(title, issuer, desc, image) {
         if (!certModalContent) return;
+
+        const imageHtml = image
+            ? `<div class="cert-lightbox-container" style="margin: 1.6rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-hover); box-shadow: var(--shadow-md);">
+                 <img src="${image}" alt="${title}" style="width: 100%; height: auto; display: block;">
+               </div>`
+            : '';
 
         certModalContent.innerHTML = `
             <div class="modal-header-block">
                 <span class="modal-category-tag">${issuer}</span>
                 <h2 class="modal-project-title" id="modal-cert-title">${title}</h2>
             </div>
+            ${imageHtml}
             <h3 class="modal-section-title">Verification &amp; Curriculum</h3>
             <p class="modal-text">${desc}</p>
             <div class="modal-actions-row" style="margin-top: 2rem;">
@@ -321,6 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <i class='bx bx-file'></i>
                     <span>Verify via Resume Profile</span>
                 </a>
+                ${image ? `<a href="${image}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class='bx bx-expand'></i><span>View Full Size</span></a>` : ''}
             </div>
         `;
     }
