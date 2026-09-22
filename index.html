@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ===== PRIMARY SEO ===== -->
-    <title>Lakshya Kaushal | Full-Stack Developer & AI/ML Engineer</title>
-    <meta name="description" content="Portfolio of Lakshya Kaushal — B.Tech CSE (AI/ML) student at MIPS Kanpur. Full-Stack Developer & AI/ML Engineer skilled in Python, Java, React.js, Node.js, Neural Networks, and Machine Learning. Open to Software Engineering opportunities.">
-    <meta name="keywords" content="Lakshya Kaushal, Full Stack Developer, AI ML Engineer, Python Developer, React Developer, MIPS Kanpur, Portfolio, Machine Learning, Node.js, Java Developer, Kanpur Developer">
+    <!-- ===== SEO & METADATA ===== -->
+    <title>Lakshya Kaushal | AI & ML | Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Lakshya Kaushal, a final-year B.Tech CSE student specializing in AI & ML, building full-stack and AI-powered applications.">
+    <meta name="keywords" content="Lakshya Kaushal, Full-Stack Developer, AI ML Engineer, B.Tech CSE, React.js, Node.js, Python, FastAPI, Machine Learning, Portfolio 2026">
     <meta name="author" content="Lakshya Kaushal">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -16,475 +16,1144 @@
     <!-- ===== OPEN GRAPH (Social Sharing) ===== -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://portfolio-1-ewg2.onrender.com">
-    <meta property="og:title" content="Lakshya Kaushal | Full-Stack Developer & AI/ML Engineer">
-    <meta property="og:description" content="B.Tech CSE (AI/ML) student building scalable full-stack apps, ML models, and AI-powered systems. Explore projects, certifications & more.">
+    <meta property="og:title" content="Lakshya Kaushal | AI & ML | Full-Stack Developer">
+    <meta property="og:description" content="Final-year B.Tech CSE (AI & ML) student building practical web applications and applied machine learning systems.">
     <meta property="og:image" content="https://portfolio-1-ewg2.onrender.com/assets/profile.jpg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="800">
-    <meta property="og:image:alt" content="Lakshya Kaushal - Full Stack Developer & AI/ML Engineer">
+    <meta property="og:image:alt" content="Lakshya Kaushal - Developer Portfolio">
     <meta property="og:site_name" content="Lakshya Kaushal Portfolio">
     <meta property="og:locale" content="en_IN">
 
     <!-- ===== TWITTER CARD ===== -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lakshya Kaushal | Full-Stack Developer & AI/ML Engineer">
-    <meta name="twitter:description" content="B.Tech CSE (AI/ML) student building scalable full-stack apps and AI-powered systems. Explore my portfolio!">
+    <meta name="twitter:title" content="Lakshya Kaushal | AI & ML | Full-Stack Developer">
+    <meta name="twitter:description" content="Final-year B.Tech CSE (AI & ML) student building practical full-stack and AI applications.">
     <meta name="twitter:image" content="https://portfolio-1-ewg2.onrender.com/assets/profile.jpg">
 
-    <!-- ===== THEME COLOR ===== -->
+    <!-- ===== BROWSER ACCENT & ICONS ===== -->
     <meta name="theme-color" content="#c9a84c">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='85' fill='%23c9a84c'>LK</text></svg>">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Boxicons for Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Boxicons for Modern Vector Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Animated Background Elements -->
-    <div class="bg-shapes">
+    <!-- Reading Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Ambient Subtle Glow Background -->
+    <div class="bg-shapes" aria-hidden="true">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
         <div class="shape shape-3"></div>
     </div>
 
-    <!-- ===== DARK/LIGHT MODE TOGGLE ===== -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle Theme">
-        <i class='bx bx-moon' id="theme-icon"></i>
-    </button>
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#home" class="logo" aria-label="Lakshya Kaushal Home">
+                <span class="logo-symbol">&lt;</span>LK<span class="logo-accent">.dev</span><span class="logo-symbol">/&gt;</span>
+            </a>
 
-    <!-- Header / Navbar -->
-    <header class="header">
-        <a href="#home" class="logo">Lakshya<span>.dev</span></a>
+            <nav class="navbar" id="navbar" aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <li><a href="#resume" class="nav-link">Resume</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
 
-        <div class="bx bx-menu" id="menu-icon"></div>
+            <div class="header-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle dark and light mode" title="Switch Theme">
+                    <i class='bx bx-moon' id="theme-icon"></i>
+                </button>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#training">Training</a>
-            <a href="#contact">Contact</a>
-        </nav>
+                <!-- Navbar Quick Resume Link -->
+                <a href="assets/Lakshya_Kaushal_Resume.html" target="_blank" rel="noopener noreferrer" class="btn-nav-resume">
+                    <span>Resume</span>
+                    <i class='bx bx-file-blank'></i>
+                </a>
+
+                <!-- Mobile Menu Hamburger -->
+                <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open mobile menu" aria-expanded="false" aria-controls="navbar">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <!-- ===== HERO SECTION ===== -->
-    <section class="home" id="home">
-        <div class="home-content reveal">
-            <p class="greeting"><i class='bx bx-diamond'></i> Open to Opportunities <i class='bx bx-diamond'></i></p>
-            <h1>Lakshya Kaushal</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>
-                B.Tech CSE (AI &amp; ML) student at <strong>MIPS, Kanpur</strong> (Graduating 2027) with hands-on experience in full-stack development, machine learning, and AI-powered applications. Built production-level projects using <strong>Python, Java, JavaScript, React.js &amp; Node.js</strong>. Seeking a Software Engineering, ML Engineering, or Full-Stack Development role to build scalable, impactful systems.
-            </p>
+    <!-- Mobile Drawer Overlay -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/lakshya-kaushal-6ab266366" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" title="GitHub"><i class='bx bxl-github'></i></a>
-                <a href="mailto:kaushallakshya71@gmail.com" title="Email"><i class='bx bx-envelope'></i></a>
-            </div>
-
-            <a href="assets/Lakshya_Kaushal_Resume.html" download="Lakshya_Kaushal_Resume.html" class="btn" target="_blank">
-                <i class='bx bx-download'></i> Download Resume
-            </a>
-        </div>
-
-        <div class="home-img reveal-right">
-            <div class="profile-frame" id="profile-frame">
-                <div class="profile-inner">
-                    <img src="assets/profile.jpg" alt="Lakshya Kaushal" class="profile-photo" id="profile-img" />
-                </div>
-                <!-- Photo Edit Button -->
-                <label class="photo-edit-btn" for="photo-upload" title="Change Photo">
-                    <i class='bx bx-camera'></i>
-                    <span>Edit Photo</span>
-                </label>
-                <input type="file" id="photo-upload" accept="image/*" style="display:none;" />
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ABOUT SECTION ===== -->
-    <section class="about" id="about">
-        <h2 class="heading reveal">About <span>Me</span></h2>
-
-        <div class="about-content reveal-left">
-            <h3>B.Tech CSE (AI &amp; ML) Student</h3>
-            <p>I am currently pursuing my <strong>Bachelor of Technology in Computer Science Engineering (AI &amp; ML)</strong> at <strong>Maharana Institute of Professional Studies (MIPS), Kanpur</strong> — from 2023 to 2027 — with a CGPA of <strong>7.5</strong>.</p>
-            <p>My core interest lies in bridging structured algorithms with innovative AI solutions — building scalable full-stack applications, training predictive ML models, and exploring domains like <strong>Neural Networks, Computer Vision, and Natural Language Processing</strong>.</p>
-
-            <div class="about-details">
-                <div class="detail-box reveal">
-                    <i class='bx bx-map'></i>
-                    <h4>Location</h4>
-                    <p>Kanpur, India</p>
-                </div>
-                <div class="detail-box reveal">
-                    <i class='bx bx-book-open'></i>
-                    <h4>Degree</h4>
-                    <p>B.Tech CSE (AI/ML) · 2023–2027</p>
-                </div>
-                <div class="detail-box reveal">
-                    <i class='bx bx-brain'></i>
-                    <h4>Focus Areas</h4>
-                    <p>Full-Stack &amp; Machine Learning</p>
-                </div>
-                <div class="detail-box reveal">
-                    <i class='bx bx-globe'></i>
-                    <h4>Languages</h4>
-                    <p>English &amp; Hindi</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SKILLS SECTION ===== -->
-    <section class="skills" id="skills">
-        <h2 class="heading reveal">Technical <span>Skills</span></h2>
-
-        <div class="skills-container reveal">
-
-            <!-- Languages -->
-            <div class="skills-box glass-card">
-                <i class='bx bx-code-block'></i>
-                <h3>Languages &amp; Databases</h3>
-                <div class="skill-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">C</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">HTML / CSS</span>
-                </div>
-            </div>
-
-            <!-- Web Technologies -->
-            <div class="skills-box glass-card">
-                <i class='bx bx-window-alt'></i>
-                <h3>Web Technologies</h3>
-                <div class="skill-tags">
-                    <span class="tag">React.js</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">Express.js</span>
-                    <span class="tag">REST APIs</span>
-                    <span class="tag">JWT Auth</span>
-                </div>
-            </div>
-
-            <!-- AI / ML -->
-            <div class="skills-box glass-card">
-                <i class='bx bx-chip'></i>
-                <h3>AI &amp; Machine Learning</h3>
-                <div class="skill-tags">
-                    <span class="tag">Neural Networks</span>
-                    <span class="tag">Computer Vision</span>
-                    <span class="tag">NLP</span>
-                    <span class="tag">Scikit-Learn</span>
-                    <span class="tag">Pandas</span>
-                    <span class="tag">NumPy</span>
-                </div>
-            </div>
-
-            <!-- Core Concepts + Tools -->
-            <div class="skills-box glass-card">
-                <i class='bx bx-data'></i>
-                <h3>Core Concepts &amp; Tools</h3>
-                <div class="skill-tags">
-                    <span class="tag">DSA</span>
-                    <span class="tag">DBMS</span>
-                    <span class="tag">OOPs</span>
-                    <span class="tag">Operating Systems</span>
-                    <span class="tag">Git &amp; GitHub</span>
-                    <span class="tag">VS Code</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ===== EXPERIENCE SECTION (NEW) ===== -->
-    <section class="experience-section" id="experience">
-        <h2 class="heading reveal">Experience &amp; <span>Activities</span></h2>
-
-        <div class="timeline reveal">
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <div class="timeline-meta">
-                        <span class="tl-org"><i class='bx bx-buildings'></i> Soft Pro India</span>
-                        <span class="tl-date"><i class='bx bx-calendar'></i> 2024</span>
+    <main id="main-content">
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero-section" id="home">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge-status">
+                        <span class="status-dot"></span>
+                        <span>Open to Fresher &amp; Internship Roles (2027 Batch)</span>
                     </div>
-                    <h4>Full Stack Development — Industrial Training</h4>
-                    <p>Completed intensive industrial training covering full-stack development from front-end (HTML, CSS, JavaScript, React.js) to back-end (Node.js, REST APIs, SQL), building production-ready applications.</p>
-                    <div class="tl-tags">
-                        <span>React.js</span><span>Node.js</span><span>REST APIs</span><span>SQL</span>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight-name">Lakshya Kaushal</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle">
+                        Final-Year B.Tech CSE Student | <span class="text-gold">AI &amp; ML</span> | <span class="text-blue">Full-Stack Developer</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        I specialize in building practical, production-ready web applications and applied machine learning systems using modern engineering standards, clean architecture, and intuitive user experiences.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class='bx bx-layer'></i>
+                            <span>View Projects</span>
+                        </a>
+                        <a href="assets/Lakshya_Kaushal_Resume.html" download="Lakshya_Kaushal_Resume.html" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <i class='bx bx-download'></i>
+                            <span>Download Resume</span>
+                        </a>
+                        <a href="#contact" class="btn btn-tertiary">
+                            <i class='bx bx-paper-plane'></i>
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <span class="social-label">Connect:</span>
+                        <div class="social-links">
+                            <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lakshya-kaushal-6ab266366" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                            <a href="mailto:kaushallakshya71@gmail.com" class="social-link" aria-label="Send Email">
+                                <i class='bx bx-envelope'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <div class="profile-card-wrapper">
+                        <div class="profile-glow-halo"></div>
+                        <div class="profile-card">
+                            <div class="profile-image-container">
+                                <img src="assets/profile.jpg" alt="Lakshya Kaushal - Full-Stack Developer and AI/ML Engineer" class="profile-img" id="profile-img" width="340" height="340" loading="eager">
+                            </div>
+                            <div class="profile-meta-banner">
+                                <div class="meta-item">
+                                    <span class="meta-label">Degree</span>
+                                    <span class="meta-value">B.Tech CSE (AI &amp; ML)</span>
+                                </div>
+                                <div class="meta-divider"></div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Graduation</span>
+                                    <span class="meta-value">Class of 2027</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <div class="timeline-meta">
-                        <span class="tl-org"><i class='bx bxl-github'></i> Open Source</span>
-                        <span class="tl-date"><i class='bx bx-calendar'></i> 2023 – Present</span>
+        <!-- ===== ABOUT SECTION ===== -->
+        <section class="section about-section" id="about">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Bridging Full-Stack Engineering &amp; Applied AI</h2>
+                    <p class="section-subtitle">Dedicated to building practical, reliable software products that solve real-world problems.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-content">
+                        <p class="about-lead">
+                            I am a final-year <strong>B.Tech Computer Science and Engineering</strong> student specializing in <strong>Artificial Intelligence &amp; Machine Learning</strong> at Maharana Institute of Professional Studies (MIPS), Kanpur.
+                        </p>
+                        <p>
+                            My engineering journey centers on end-to-end development: from building responsive client interfaces and secure RESTful backend APIs to training and integrating machine learning models for computer vision, NLP, and intelligent decision systems.
+                        </p>
+                        <p>
+                            With a strong foundation in <strong>Data Structures, Algorithms (Java), DBMS, and Object-Oriented Design</strong>, I focus on writing maintainable, clean code, optimizing application performance, and designing software solutions that deliver genuine user value.
+                        </p>
+
+                        <div class="highlights-row">
+                            <div class="highlight-chip">
+                                <i class='bx bx-check-shield'></i>
+                                <span>Production-Ready APIs</span>
+                            </div>
+                            <div class="highlight-chip">
+                                <i class='bx bx-brain'></i>
+                                <span>Applied Machine Learning</span>
+                            </div>
+                            <div class="highlight-chip">
+                                <i class='bx bx-code-alt'></i>
+                                <span>100+ LeetCode DSA Solutions</span>
+                            </div>
+                            <div class="highlight-chip">
+                                <i class='bx bx-devices'></i>
+                                <span>Responsive Web Design</span>
+                            </div>
+                        </div>
                     </div>
-                    <h4>Open Source Contributor</h4>
-                    <p>Enthusiastic contributor to open-source student repositories — giving back to the developer community and learning through real-world collaboration.</p>
-                    <div class="tl-tags">
-                        <span>GitHub</span><span>Collaboration</span><span>Open Source</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <div class="timeline-meta">
-                        <span class="tl-org"><i class='bx bx-buildings'></i> AlphaCollege</span>
-                        <span class="tl-date"><i class='bx bx-calendar'></i> 2026</span>
-                    </div>
-                    <h4>Alpha — DSA with Java (Intensive Course)</h4>
-                    <p>Completed a structured, intensive Data Structures &amp; Algorithms course in Java — mastering arrays, trees, graphs, dynamic programming, and competitive problem-solving.</p>
-                    <div class="tl-tags">
-                        <span>Java</span><span>DSA</span><span>Algorithms</span><span>Problem Solving</span>
-                    </div>
-                </div>
-            </div>
+                    <div class="about-sidebar">
+                        <!-- Education Card -->
+                        <div class="education-card glass-card">
+                            <div class="card-icon-tag">
+                                <i class='bx bx-book-bookmark'></i>
+                            </div>
+                            <span class="card-label">Education</span>
+                            <h3 class="education-degree">Bachelor of Technology (B.Tech)</h3>
+                            <p class="education-field">Computer Science &amp; Engineering (AI &amp; ML)</p>
+                            <p class="education-institute">Maharana Institute of Professional Studies, Kanpur</p>
+                            
+                            <div class="education-footer">
+                                <div class="edu-badge">
+                                    <i class='bx bx-calendar'></i>
+                                    <span>2023 – 2027 (Expected)</span>
+                                </div>
+                                <div class="edu-badge cgpa-badge">
+                                    <i class='bx bx-award'></i>
+                                    <span>CGPA: 7.5</span>
+                                </div>
+                            </div>
+                        </div>
 
-        </div>
-    </section>
-
-    <!-- ===== PROJECTS SECTION ===== -->
-    <section class="projects" id="projects">
-        <h2 class="heading reveal">Key <span>Projects</span></h2>
-
-        <div class="projects-container">
-
-            <!-- Project 1 -->
-            <div class="project-box glass-card reveal">
-                <div class="project-number">01</div>
-                <div class="project-info">
-                    <h4>Mistri</h4>
-                    <h5>Smart Electronics Repair Management System</h5>
-                    <p>Built a full-stack platform with role-based dashboards for Admins, Staff, and Customers, enabling end-to-end repair workflow management. Developed secure backend APIs with JWT authentication, dynamic inventory management, and bilingual (English/Hindi) support.</p>
-                    <div class="tech-stack">
-                        <span>Python</span><span>JavaScript</span><span>CSS</span><span>SQL</span><span>JWT</span><span>Web Security</span>
-                    </div>
-                    <a href="#" class="btn-small"><i class='bx bx-link-external'></i> View Details</a>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-box glass-card reveal">
-                <div class="project-number">02</div>
-                <div class="project-info">
-                    <h4>AI Resume Engine</h4>
-                    <h5>AI-Powered ATS Optimization Tool</h5>
-                    <p>Engineered an AI-powered resume analysis tool with 9 integrated modules covering resume matching, ATS scoring, and career roadmap generation. Designed an optimized user interface that improved ATS optimization accuracy and reduced resume review time for end-users.</p>
-                    <div class="tech-stack">
-                        <span>JavaScript</span><span>HTML</span><span>CSS</span><span>AI APIs</span>
-                    </div>
-                    <a href="https://resumematch-ai-1.onrender.com" class="btn-small" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i> Live Site</a>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-box glass-card reveal">
-                <div class="project-number">03</div>
-                <div class="project-info">
-                    <h4>Early Academic Warning System</h4>
-                    <h5>ML-Based Student Dropout Prediction</h5>
-                    <p>Designed and trained an ML predictive model to identify at-risk students and forecast potential dropout scenarios with actionable insights. Processed and analyzed complex student datasets, delivering results via an analytical dashboard for educational administrators.</p>
-                    <div class="tech-stack">
-                        <span>Python</span><span>Scikit-Learn</span><span>Pandas</span><span>NumPy</span><span>Machine Learning</span>
-                    </div>
-                    <a href="#" class="btn-small"><i class='bx bx-link-external'></i> View Details</a>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-box glass-card reveal">
-                <div class="project-number">04</div>
-                <div class="project-info">
-                    <h4>Personal Portfolio Website</h4>
-                    <h5>Responsive Developer Portfolio</h5>
-                    <p>Designed and developed a fully responsive personal portfolio website to showcase projects, skills, certifications, and professional profile. Implemented smooth animations, interactive UI components, and an optimized layout ensuring fast load time and seamless user experience across all devices.</p>
-                    <div class="tech-stack">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                    </div>
-                    <a href="https://portfolio-1-ewg2.onrender.com" class="btn-small" target="_blank"><i class='bx bx-link-external'></i> Live Site</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ===== ACHIEVEMENTS & CERTIFICATIONS ===== -->
-    <section class="achievements" id="achievements">
-        <h2 class="heading reveal">Achievements &amp; <span>Certificates</span></h2>
-
-        <!-- Stats Row -->
-        <div class="stats-row reveal">
-            <div class="stat-card glass-card">
-                <span class="stat-num" data-target="100">0</span><span class="stat-plus">+</span>
-                <p>LeetCode Problems</p>
-            </div>
-            <div class="stat-card glass-card">
-                <span class="stat-num" data-target="9">0</span><span class="stat-plus"></span>
-                <p>Certifications Earned</p>
-            </div>
-            <div class="stat-card glass-card">
-                <span class="stat-num" data-target="5">0</span><span class="stat-plus">★</span>
-                <p>HackerRank Stars</p>
-            </div>
-            <div class="stat-card glass-card">
-                <span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span>
-                <p>Projects Built</p>
-            </div>
-        </div>
-
-        <div class="achievements-wrapper">
-
-            <!-- Coding Profiles -->
-            <div class="ach-col glass-card reveal-left">
-                <h3><i class='bx bx-trophy'></i> Coding Profiles</h3>
-                <ul class="ach-list">
-                    <li>
-                        <strong>HackerRank</strong>
-                        <p>🌟 5-Star rating in <strong>Python, Java &amp; SQL</strong> — consistently top-rated across multiple domains.</p>
-                    </li>
-                    <li>
-                        <strong>LeetCode</strong>
-                        <p>Successfully solved <strong>100+ algorithmic problems</strong>, sharpening DSA skills across difficulty levels.</p>
-                    </li>
-                    <li>
-                        <strong>CodeChef &amp; Codeforces</strong>
-                        <p>Active competitive programmer, participating in contests focused on logic and algorithmic problem-solving.</p>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Certifications -->
-            <div class="ach-col glass-card reveal-right">
-                <h3><i class='bx bx-certification'></i> Certifications</h3>
-                <ul class="cert-list">
-                    <li><i class='bx bxs-badge-check'></i> <span>Neural Networks, Computer Vision &amp; NLP</span> — NPTEL</li>
-                    <li><i class='bx bxs-badge-check'></i> <span>Alpha — DSA with Java</span> — AlphaCollege</li>
-                    <li><i class='bx bxs-badge-check'></i> <span>Basics of Data Analytics</span> — Physics Wallah</li>
-                    <li><i class='bx bxs-badge-check'></i> <span>Data Visualisation using Python</span> — IBM</li>
-                    <li><i class='bx bxs-badge-check'></i> <span>AI Foundations Associate</span> — Oracle</li>
-                    <li><i class='bx bxs-badge-check'></i> <span>Generative AI Studio</span> — Simplilearn</li>
-                    <li><i class='bx bxs-badge-check'></i> <span>Databricks for Machine Learning</span> — Simplilearn</li>
-                    <li><i class='bx bxs-badge-check'></i> <span>Python Essentials (Verified)</span> — CISCO Networking Academy</li>
-                    <li><i class='bx bxs-badge-check'></i> <span>JavaScript Intermediate</span> — HackerRank</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ===== WORKSHOPS & TRAINING SECTION ===== -->
-    <section class="skills" id="training" style="min-height: auto; padding-bottom: 8rem;">
-        <h2 class="heading reveal">Workshops &amp; <span>Training</span></h2>
-
-        <div class="training-grid reveal">
-
-            <div class="training-card glass-card">
-                <div class="training-meta">
-                    <span class="training-org"><i class='bx bx-buildings'></i> Soft Pro India</span>
-                </div>
-                <h4>Full Stack Development Workshop</h4>
-                <p>Completed an intensive workshop covering front-end (HTML, CSS, JavaScript, React.js) and back-end (Node.js, REST APIs, SQL) development — building real-world, production-ready applications from scratch.</p>
-                <div class="tech-stack" style="margin-bottom:0; margin-top: 1.5rem;">
-                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React.js</span><span>Node.js</span><span>REST APIs</span><span>SQL</span>
-                </div>
-            </div>
-
-            <div class="training-card glass-card">
-                <div class="training-meta">
-                    <span class="training-org"><i class='bx bx-buildings'></i> AlphaCollege</span>
-                </div>
-                <h4>Alpha — DSA with Java</h4>
-                <p>Completed a structured, intensive Data Structures &amp; Algorithms course in Java — mastering core topics like arrays, trees, graphs, dynamic programming, and competitive problem-solving techniques.</p>
-                <div class="tech-stack" style="margin-bottom:0; margin-top: 1.5rem;">
-                    <span>Java</span><span>DSA</span><span>Algorithms</span><span>Problem Solving</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ===== CONTACT SECTION ===== -->
-    <section class="contact" id="contact">
-        <h2 class="heading reveal">Get In <span>Touch</span></h2>
-        <p class="contact-desc reveal">I'm currently looking for new opportunities. Whether you have a question, a project idea, or just want to say hi — I'll get back to you as soon as possible!</p>
-
-        <div class="contact-methods reveal">
-            <a href="mailto:kaushallakshya71@gmail.com" class="btn">
-                <i class='bx bx-envelope'></i> Send an Email
-            </a>
-
-            <div class="contact-cards">
-                <div class="contact-card glass-card">
-                    <i class='bx bxs-phone'></i>
-                    <div class="contact-card-text">
-                        <p>Phone</p>
-                        <p>+91 8077438455</p>
-                    </div>
-                </div>
-                <div class="contact-card glass-card">
-                    <i class='bx bxs-map'></i>
-                    <div class="contact-card-text">
-                        <p>Location</p>
-                        <p>Kanpur, India</p>
-                    </div>
-                </div>
-                <div class="contact-card glass-card">
-                    <i class='bx bxl-linkedin'></i>
-                    <div class="contact-card-text">
-                        <p>LinkedIn</p>
-                        <a href="https://www.linkedin.com/in/lakshya-kaushal-6ab266366" target="_blank" style="font-size:1.6rem; color:var(--main-color); font-weight:500;">Connect Here</a>
-                    </div>
-                </div>
-                <div class="contact-card glass-card">
-                    <i class='bx bxl-github'></i>
-                    <div class="contact-card-text">
-                        <p>GitHub</p>
-                        <a href="https://github.com/kaushallakshya71-a11y" target="_blank" style="font-size:1.6rem; color:var(--main-color); font-weight:500;">View Profile</a>
+                        <!-- Core Interest Card -->
+                        <div class="interest-card glass-card">
+                            <div class="interest-item">
+                                <i class='bx bx-map-pin text-gold'></i>
+                                <div>
+                                    <span class="label">Location</span>
+                                    <span class="val">Kanpur, Uttar Pradesh, India</span>
+                                </div>
+                            </div>
+                            <div class="interest-item">
+                                <i class='bx bx-chat text-blue'></i>
+                                <div>
+                                    <span class="label">Languages</span>
+                                    <span class="val">English &amp; Hindi (Fluent)</span>
+                                </div>
+                            </div>
+                            <div class="interest-item">
+                                <i class='bx bx-briefcase text-gold'></i>
+                                <div>
+                                    <span class="label">Availability</span>
+                                    <span class="val">Internships &amp; Full-Time Roles</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- ===== SKILLS SECTION ===== -->
+        <section class="section skills-section" id="skills">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Technical Skills</span>
+                    <h2 class="section-title">Core Competencies &amp; Technologies</h2>
+                    <p class="section-subtitle">Categorized without fabricated percentages — honest, practical technical stack used in projects.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class='bx bx-code-curly'></i></div>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-pill">Java</span>
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">C</span>
+                            <span class="skill-pill">JavaScript (ES6+)</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend Development -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class='bx bx-layout'></i></div>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-pill">React.js</span>
+                            <span class="skill-pill">HTML5</span>
+                            <span class="skill-pill">CSS3 / Flexbox / Grid</span>
+                            <span class="skill-pill">Responsive Design</span>
+                            <span class="skill-pill">DOM Manipulation</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend Development -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class='bx bx-server'></i></div>
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-pill">Node.js</span>
+                            <span class="skill-pill">Express.js</span>
+                            <span class="skill-pill">FastAPI</span>
+                            <span class="skill-pill">RESTful APIs</span>
+                            <span class="skill-pill">JWT Authentication</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class='bx bx-data'></i></div>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-pill">SQL</span>
+                            <span class="skill-pill">MySQL</span>
+                            <span class="skill-pill">SQLite</span>
+                            <span class="skill-pill">Database Schema Design</span>
+                        </div>
+                    </div>
+
+                    <!-- AI / Machine Learning -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class='bx bx-chip'></i></div>
+                            <h3>AI &amp; Machine Learning</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-pill">Machine Learning</span>
+                            <span class="skill-pill">Natural Language Processing (NLP)</span>
+                            <span class="skill-pill">Computer Vision</span>
+                            <span class="skill-pill">Sentence Transformers</span>
+                            <span class="skill-pill">Scikit-Learn</span>
+                            <span class="skill-pill">Pandas</span>
+                            <span class="skill-pill">NumPy</span>
+                        </div>
+                    </div>
+
+                    <!-- Core Computer Science -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class='bx bx-brain'></i></div>
+                            <h3>Core Computer Science</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-pill">Data Structures &amp; Algorithms</span>
+                            <span class="skill-pill">DBMS</span>
+                            <span class="skill-pill">Object-Oriented Programming (OOP)</span>
+                            <span class="skill-pill">Operating Systems</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="cat-icon"><i class='bx bx-wrench'></i></div>
+                            <h3>Tools &amp; Platforms</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-pill">Git</span>
+                            <span class="skill-pill">GitHub</span>
+                            <span class="skill-pill">VS Code</span>
+                            <span class="skill-pill">Streamlit</span>
+                            <span class="skill-pill">Postman</span>
+                            <span class="skill-pill">npm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section class="section projects-section" id="projects">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio Work</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Real-world full-stack architectures and machine learning systems built with modern engineering practices.</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="project-filter-bar" role="tablist" aria-label="Filter Projects">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+                    <button class="filter-btn" data-filter="ai-ml" role="tab" aria-selected="false">AI &amp; ML</button>
+                    <button class="filter-btn" data-filter="full-stack" role="tab" aria-selected="false">Full-Stack</button>
+                    <button class="filter-btn" data-filter="web-dev" role="tab" aria-selected="false">Web Development</button>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project 1: Mistri -->
+                    <article class="project-card glass-card" data-category="full-stack" data-project="mistri">
+                        <div class="project-card-header">
+                            <div class="project-category-badge">Full-Stack Platform</div>
+                            <span class="project-order">01</span>
+                        </div>
+                        <h3 class="project-title">Mistri – Smart Electronics Repair Management System</h3>
+                        <p class="project-desc">
+                            A smart repair management platform designed to connect customers, staff, and administrators while managing repair requests, estimates, status tracking, billing, inventory, and service operations.
+                        </p>
+                        <ul class="project-features-list">
+                            <li>Role-based dashboards for Admins, Staff, and Customers</li>
+                            <li>AI-assisted repair cost estimation &amp; status tracking</li>
+                            <li>QR-based tracking, UPI payments &amp; GST bill generation</li>
+                            <li>Dynamic inventory management with bilingual (English/Hindi) support</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>SQL</span>
+                            <span>JWT Auth</span>
+                            <span>REST APIs</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <button class="btn-card btn-view-details" data-project-id="mistri" type="button">
+                                <i class='bx bx-info-circle'></i>
+                                <span>View Details</span>
+                            </button>
+                            <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" class="btn-card btn-code" title="View Source on GitHub">
+                                <i class='bx bxl-github'></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: HireLens -->
+                    <article class="project-card glass-card" data-category="ai-ml full-stack" data-project="hirelens">
+                        <div class="project-card-header">
+                            <div class="project-category-badge">AI / ML &amp; Web</div>
+                            <span class="project-order">02</span>
+                        </div>
+                        <h3 class="project-title">HireLens – AI Resume &amp; Job Matching Platform</h3>
+                        <p class="project-desc">
+                            An AI-powered platform that analyzes resumes against job descriptions and provides matching insights, skill gap analysis, and tailored improvement suggestions.
+                        </p>
+                        <ul class="project-features-list">
+                            <li>Semantic Resume-JD matching with contextual score</li>
+                            <li>9-module analysis covering ATS keyword &amp; skill gap audit</li>
+                            <li>Tailored resume improvement and career roadmap suggestions</li>
+                            <li>Database tracking for multi-candidate evaluation</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>Python / JS</span>
+                            <span>NLP</span>
+                            <span>Sentence Transformers</span>
+                            <span>AI APIs</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <button class="btn-card btn-view-details" data-project-id="hirelens" type="button">
+                                <i class='bx bx-info-circle'></i>
+                                <span>View Details</span>
+                            </button>
+                            <a href="https://resumematch-ai-1.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-card btn-live" title="Open Live Site">
+                                <i class='bx bx-link-external'></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" class="btn-card btn-code" title="View Source on GitHub">
+                                <i class='bx bxl-github'></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Buy or Wait? -->
+                    <article class="project-card glass-card" data-category="ai-ml web-dev" data-project="buyorwait">
+                        <div class="project-card-header">
+                            <div class="project-category-badge">AI Decision System</div>
+                            <span class="project-order">03</span>
+                        </div>
+                        <h3 class="project-title">Buy or Wait? – AI Financial Decision Assistant</h3>
+                        <p class="project-desc">
+                            An AI-based financial assistant that analyzes planned purchases against available balance, expected income, recurring bills, and pending payments to provide an affordability assessment.
+                        </p>
+                        <ul class="project-features-list">
+                            <li>Data-driven expense affordability assessment</li>
+                            <li>Income vs. recurring expense analysis to compute safe spend limit</li>
+                            <li>Structured payment scheduling and purchase planning</li>
+                            <li>Actionable spending adjustment suggestions (non-advisory)</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>React.js / JS</span>
+                            <span>Rule/ML Logic</span>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <button class="btn-card btn-view-details" data-project-id="buyorwait" type="button">
+                                <i class='bx bx-info-circle'></i>
+                                <span>View Details</span>
+                            </button>
+                            <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" class="btn-card btn-code" title="View Source on GitHub">
+                                <i class='bx bxl-github'></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: AgroScan -->
+                    <article class="project-card glass-card" data-category="ai-ml full-stack" data-project="agroscan">
+                        <div class="project-card-header">
+                            <div class="project-category-badge">Computer Vision &amp; AI</div>
+                            <span class="project-order">04</span>
+                        </div>
+                        <h3 class="project-title">AgroScan – AI-Based Plant &amp; Soil Analysis</h3>
+                        <p class="project-desc">
+                            An agricultural intelligence tool leveraging machine learning and computer vision to identify crop leaf diseases and evaluate soil suitability for optimal yields.
+                        </p>
+                        <ul class="project-features-list">
+                            <li>Image-based crop disease classification via Computer Vision</li>
+                            <li>Soil texture and nutrient characteristic assessment</li>
+                            <li>Actionable crop care recommendations</li>
+                            <li>Bilingual interface support (Hindi &amp; English) with FastAPI backend</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Computer Vision</span>
+                            <span>Scikit-Learn</span>
+                            <span>Streamlit / Web</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <button class="btn-card btn-view-details" data-project-id="agroscan" type="button">
+                                <i class='bx bx-info-circle'></i>
+                                <span>View Details</span>
+                            </button>
+                            <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" class="btn-card btn-code" title="View Source on GitHub">
+                                <i class='bx bxl-github'></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Early Academic Warning System -->
+                    <article class="project-card glass-card" data-category="ai-ml" data-project="academicwarning">
+                        <div class="project-card-header">
+                            <div class="project-category-badge">Predictive Analytics</div>
+                            <span class="project-order">05</span>
+                        </div>
+                        <h3 class="project-title">Early Academic Warning System – Dropout Prediction</h3>
+                        <p class="project-desc">
+                            An ML predictive classification model and administrator dashboard that identifies students at risk of academic failure and forecasts dropout likelihood with actionable retention insights.
+                        </p>
+                        <ul class="project-features-list">
+                            <li>Supervised classification model trained on academic indicators</li>
+                            <li>Early risk stratification for timely counselor interventions</li>
+                            <li>Administrative visual analytics dashboard</li>
+                            <li>Evaluated using precision-recall and ROC-AUC metrics</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>Python</span>
+                            <span>Scikit-Learn</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Analytical UI</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <button class="btn-card btn-view-details" data-project-id="academicwarning" type="button">
+                                <i class='bx bx-info-circle'></i>
+                                <span>View Details</span>
+                            </button>
+                            <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" class="btn-card btn-code" title="View Source on GitHub">
+                                <i class='bx bxl-github'></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Responsive Developer Portfolio -->
+                    <article class="project-card glass-card" data-category="web-dev" data-project="portfolio">
+                        <div class="project-card-header">
+                            <div class="project-category-badge">Web Engineering</div>
+                            <span class="project-order">06</span>
+                        </div>
+                        <h3 class="project-title">Personal Developer Portfolio – Modern 2026 Edition</h3>
+                        <p class="project-desc">
+                            A performant, accessible personal portfolio website engineered to present software projects, verified credentials, and technical competence to engineering recruiters.
+                        </p>
+                        <ul class="project-features-list">
+                            <li>Semantic HTML5, CSS3 Custom Properties &amp; vanilla JavaScript</li>
+                            <li>Dual-mode persistent color system (Dark &amp; Light)</li>
+                            <li>Custom modal system, scroll depth tracking &amp; mobile drawer</li>
+                            <li>Zero external heavy UI frameworks for optimal Core Web Vitals</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Node.js / Express</span>
+                        </div>
+                        <div class="project-card-actions">
+                            <button class="btn-card btn-view-details" data-project-id="portfolio" type="button">
+                                <i class='bx bx-info-circle'></i>
+                                <span>View Details</span>
+                            </button>
+                            <a href="https://portfolio-1-ewg2.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-card btn-live" title="Open Live Site">
+                                <i class='bx bx-link-external'></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="https://github.com/kaushallakshya71-a11y/Portfolio" target="_blank" rel="noopener noreferrer" class="btn-card btn-code" title="View Source on GitHub">
+                                <i class='bx bxl-github'></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE & TRAINING SECTION ===== -->
+        <section class="section experience-section" id="experience">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Career History</span>
+                    <h2 class="section-title">Experience &amp; Internships</h2>
+                    <p class="section-subtitle">Clearly distinguishing academic internships, virtual industry simulations, and training.</p>
+                </div>
+
+                <div class="experience-timeline">
+                    <!-- Item 1: IBM SkillsBuild -->
+                    <div class="timeline-row">
+                        <div class="timeline-node">
+                            <div class="node-bullet"></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <div class="card-badge-row">
+                                <span class="badge-role-type badge-internship">Academic Internship</span>
+                                <span class="badge-date"><i class='bx bx-calendar'></i> Verified Program</span>
+                            </div>
+                            <h3 class="exp-title">Data Analytics with AI – Academic Intern</h3>
+                            <h4 class="exp-company">IBM SkillsBuild</h4>
+                            <p class="exp-summary">
+                                Applied foundational machine learning, predictive analytics, and statistical data visualization pipelines on industry-modeled datasets. Built analytical dashboards and data pipelines using Python, Pandas, and visualization libraries.
+                            </p>
+                            <div class="exp-tags">
+                                <span>Data Analytics</span>
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>IBM SkillsBuild</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: GrowMore Digital -->
+                    <div class="timeline-row">
+                        <div class="timeline-node">
+                            <div class="node-bullet"></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <div class="card-badge-row">
+                                <span class="badge-role-type badge-internship">Internship</span>
+                                <span class="badge-date"><i class='bx bx-calendar'></i> Industry Experience</span>
+                            </div>
+                            <h3 class="exp-title">Full Stack Developer Intern</h3>
+                            <h4 class="exp-company">GrowMore Digital</h4>
+                            <p class="exp-summary">
+                                Developed responsive frontend interfaces with modern JavaScript, HTML5, and CSS3. Collaborated on RESTful API endpoint integration, form validation, and cross-browser testing for web applications.
+                            </p>
+                            <div class="exp-tags">
+                                <span>Full-Stack Development</span>
+                                <span>JavaScript</span>
+                                <span>Frontend UI</span>
+                                <span>REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Soft Pro India -->
+                    <div class="timeline-row">
+                        <div class="timeline-node">
+                            <div class="node-bullet"></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <div class="card-badge-row">
+                                <span class="badge-role-type badge-training">Industrial Training</span>
+                                <span class="badge-date"><i class='bx bx-calendar'></i> 2024</span>
+                            </div>
+                            <h3 class="exp-title">Full Stack Web Development – Industrial Training</h3>
+                            <h4 class="exp-company">Soft Pro India</h4>
+                            <p class="exp-summary">
+                                Completed hands-on industrial training covering client-side architectures (HTML5, CSS3, JavaScript, React.js) and server-side components (Node.js, Express, REST APIs, SQL databases). Engineered full-stack modules with authentication and database persistence.
+                            </p>
+                            <div class="exp-tags">
+                                <span>React.js</span>
+                                <span>Node.js</span>
+                                <span>SQL</span>
+                                <span>Express</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Deloitte Virtual Experience -->
+                    <div class="timeline-row">
+                        <div class="timeline-node">
+                            <div class="node-bullet"></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <div class="card-badge-row">
+                                <span class="badge-role-type badge-virtual">Virtual Experience</span>
+                                <span class="badge-date"><i class='bx bx-check-circle'></i> Simulation Completed</span>
+                            </div>
+                            <h3 class="exp-title">Technology Job Simulation</h3>
+                            <h4 class="exp-company">Deloitte Technology</h4>
+                            <p class="exp-summary">
+                                Completed simulation modules reflecting practical technology consulting: business requirement analysis, technical feasibility assessment, and technology modernization strategies for client infrastructure.
+                            </p>
+                            <div class="exp-tags">
+                                <span>Tech Consulting</span>
+                                <span>Architecture Analysis</span>
+                                <span>Problem Solving</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Walmart Global Tech Virtual Experience -->
+                    <div class="timeline-row">
+                        <div class="timeline-node">
+                            <div class="node-bullet"></div>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <div class="card-badge-row">
+                                <span class="badge-role-type badge-virtual">Virtual Experience</span>
+                                <span class="badge-date"><i class='bx bx-check-circle'></i> Simulation Completed</span>
+                            </div>
+                            <h3 class="exp-title">Advanced Software Engineering Job Simulation</h3>
+                            <h4 class="exp-company">Walmart Global Tech</h4>
+                            <p class="exp-summary">
+                                Engaged in simulated enterprise software engineering tasks including data structures optimization, relational database queries for high-volume transactions, and software design principles.
+                            </p>
+                            <div class="exp-tags">
+                                <span>Software Engineering</span>
+                                <span>DSA Optimization</span>
+                                <span>Relational Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ACHIEVEMENTS SECTION ===== -->
+        <section class="section achievements-section" id="achievements">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Verified Milestones</span>
+                    <h2 class="section-title">Coding Profiles &amp; Achievements</h2>
+                    <p class="section-subtitle">Quantifiable achievements on competitive coding platforms.</p>
+                </div>
+
+                <!-- Verified Stats Row -->
+                <div class="stats-counter-row">
+                    <div class="stat-box glass-card">
+                        <span class="stat-figure" data-target="100">0</span><span class="stat-symbol">+</span>
+                        <span class="stat-title">LeetCode Solved</span>
+                        <p class="stat-desc">Sharpening algorithms &amp; data structures</p>
+                    </div>
+
+                    <div class="stat-box glass-card">
+                        <span class="stat-figure" data-target="5">0</span><span class="stat-symbol">★</span>
+                        <span class="stat-title">HackerRank Rating</span>
+                        <p class="stat-desc">Top 5-Star badges in Python, Java &amp; SQL</p>
+                    </div>
+
+                    <div class="stat-box glass-card">
+                        <span class="stat-figure" data-target="9">0</span><span class="stat-symbol"></span>
+                        <span class="stat-title">Technical Certifications</span>
+                        <p class="stat-desc">Verified credentials from NPTEL, Oracle, IBM, Cisco</p>
+                    </div>
+
+                    <div class="stat-box glass-card">
+                        <span class="stat-figure" data-target="5">0</span><span class="stat-symbol">+</span>
+                        <span class="stat-title">Applications Built</span>
+                        <p class="stat-desc">End-to-end full-stack and machine learning systems</p>
+                    </div>
+                </div>
+
+                <div class="platforms-grid">
+                    <div class="platform-card glass-card">
+                        <div class="platform-header">
+                            <i class='bx bxl-codepen platform-icon'></i>
+                            <div>
+                                <h3>HackerRank</h3>
+                                <span class="platform-tag">5-Star Gold Badge</span>
+                            </div>
+                        </div>
+                        <p>Consistent high ratings across Python, Java, and SQL domain tracks demonstrating strong syntax command and query efficiency.</p>
+                    </div>
+
+                    <div class="platform-card glass-card">
+                        <div class="platform-header">
+                            <i class='bx bx-code-alt platform-icon'></i>
+                            <div>
+                                <h3>LeetCode</h3>
+                                <span class="platform-tag">100+ Problems</span>
+                            </div>
+                        </div>
+                        <p>Practicing algorithmic techniques across arrays, strings, two pointers, hashing, linked lists, trees, and dynamic programming.</p>
+                    </div>
+
+                    <div class="platform-card glass-card">
+                        <div class="platform-header">
+                            <i class='bx bx-terminal platform-icon'></i>
+                            <div>
+                                <h3>CodeChef &amp; Competitive Platforms</h3>
+                                <span class="platform-tag">Contest Participant</span>
+                            </div>
+                        </div>
+                        <p>Participating in timed algorithmic problem-solving contests to develop efficient logic under execution constraints.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CERTIFICATES SECTION ===== -->
+        <section class="section certificates-section" id="certificates">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Credentials</span>
+                    <h2 class="section-title">Certifications &amp; Courses</h2>
+                    <p class="section-subtitle">Verified technical programs completed from established institutes and industry leaders.</p>
+                </div>
+
+                <div class="certificates-grid">
+                    <!-- Cert 1 -->
+                    <div class="certificate-card glass-card">
+                        <div class="cert-icon-box">
+                            <i class='bx bx-badge-check'></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer">NPTEL</span>
+                            <h3 class="cert-title">Neural Networks for Computer Vision and NLP</h3>
+                            <p class="cert-note">Foundational course in deep learning architectures, CNNs, RNNs, and language processing pipelines.</p>
+                        </div>
+                        <button class="btn-cert-view" data-cert-title="Neural Networks for Computer Vision and NLP" data-cert-issuer="NPTEL" data-cert-desc="Comprehensive theoretical and practical coursework covering artificial neural networks, convolution architectures for computer vision, and sequence modeling for NLP." type="button">
+                            <span>View Details</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="certificate-card glass-card">
+                        <div class="cert-icon-box">
+                            <i class='bx bx-badge-check'></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer">Oracle</span>
+                            <h3 class="cert-title">Oracle AI Foundations Associate</h3>
+                            <p class="cert-note">Official certification validating core artificial intelligence, machine learning concepts, and cloud AI services.</p>
+                        </div>
+                        <button class="btn-cert-view" data-cert-title="Oracle AI Foundations Associate" data-cert-issuer="Oracle" data-cert-desc="Certified knowledge in AI foundations, machine learning models, deep learning concepts, and enterprise AI deployment on Oracle Cloud infrastructure." type="button">
+                            <span>View Details</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="certificate-card glass-card">
+                        <div class="cert-icon-box">
+                            <i class='bx bx-badge-check'></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer">AlphaCollege</span>
+                            <h3 class="cert-title">Alpha — DSA with Java</h3>
+                            <p class="cert-note">Intensive Data Structures &amp; Algorithms curriculum in Java covering data abstractions, trees, and dynamic programming.</p>
+                        </div>
+                        <button class="btn-cert-view" data-cert-title="Alpha — DSA with Java" data-cert-issuer="AlphaCollege" data-cert-desc="Comprehensive DSA training in Java: time-space complexities, arrays, recursion, backtracking, linked lists, binary trees, graphs, heaps, and DP algorithms." type="button">
+                            <span>View Details</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="certificate-card glass-card">
+                        <div class="cert-icon-box">
+                            <i class='bx bx-badge-check'></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer">IBM</span>
+                            <h3 class="cert-title">Data Visualization using Python</h3>
+                            <p class="cert-note">Specialized certification in exploratory data analysis and graphical representation using Python graphing libraries.</p>
+                        </div>
+                        <button class="btn-cert-view" data-cert-title="Data Visualization using Python" data-cert-issuer="IBM" data-cert-desc="Hands-on mastery in creating exploratory plots, statistical representations, and business reporting visuals using Matplotlib, Seaborn, and Pandas." type="button">
+                            <span>View Details</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </div>
+
+                    <!-- Cert 5 -->
+                    <div class="certificate-card glass-card">
+                        <div class="cert-icon-box">
+                            <i class='bx bx-badge-check'></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer">Cisco Networking Academy</span>
+                            <h3 class="cert-title">Cisco Python Essentials 1</h3>
+                            <p class="cert-note">Verified programmatic foundations in Python syntax, data structures, functional modules, and object orientation.</p>
+                        </div>
+                        <button class="btn-cert-view" data-cert-title="Cisco Python Essentials 1" data-cert-issuer="Cisco Networking Academy" data-cert-desc="Official Cisco verification covering fundamental Python data types, control flow, functions, lists, tuples, dictionaries, exceptions, and file processing." type="button">
+                            <span>View Details</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </div>
+
+                    <!-- Cert 6 -->
+                    <div class="certificate-card glass-card">
+                        <div class="cert-icon-box">
+                            <i class='bx bx-badge-check'></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer">HackerRank</span>
+                            <h3 class="cert-title">JavaScript (Intermediate) Skill Certificate</h3>
+                            <p class="cert-note">Standardized evaluation covering closures, prototypes, asynchronous JavaScript, event loop, and DOM logic.</p>
+                        </div>
+                        <button class="btn-cert-view" data-cert-title="JavaScript (Intermediate)" data-cert-issuer="HackerRank" data-cert-desc="Assessed proficiency in intermediate JavaScript programming including asynchronous promises, closures, prototypal inheritance, and ES6+ features." type="button">
+                            <span>View Details</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </div>
+
+                    <!-- Cert 7 -->
+                    <div class="certificate-card glass-card">
+                        <div class="cert-icon-box">
+                            <i class='bx bx-badge-check'></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer">Simplilearn</span>
+                            <h3 class="cert-title">Generative AI Studio</h3>
+                            <p class="cert-note">Applied training in transformer concepts, prompt engineering, generative models, and LLM application integrations.</p>
+                        </div>
+                        <button class="btn-cert-view" data-cert-title="Generative AI Studio" data-cert-issuer="Simplilearn" data-cert-desc="Training on prompt design, generative AI architectures, foundational models, embeddings, and integrating LLMs into modern web workflows." type="button">
+                            <span>View Details</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </div>
+
+                    <!-- Cert 8 -->
+                    <div class="certificate-card glass-card">
+                        <div class="cert-icon-box">
+                            <i class='bx bx-badge-check'></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer">Simplilearn</span>
+                            <h3 class="cert-title">Databricks for Machine Learning</h3>
+                            <p class="cert-note">Coursework in cloud ML pipelines, Apache Spark data frames, feature management, and model tracking.</p>
+                        </div>
+                        <button class="btn-cert-view" data-cert-title="Databricks for Machine Learning" data-cert-issuer="Simplilearn" data-cert-desc="Hands-on introduction to Databricks workspace, distributed data processing for ML, MLflow model tracking, and cluster management." type="button">
+                            <span>View Details</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </div>
+
+                    <!-- Cert 9 -->
+                    <div class="certificate-card glass-card">
+                        <div class="cert-icon-box">
+                            <i class='bx bx-badge-check'></i>
+                        </div>
+                        <div class="cert-body">
+                            <span class="cert-issuer">Physics Wallah</span>
+                            <h3 class="cert-title">Basics of Data Analytics</h3>
+                            <p class="cert-note">Coursework covering descriptive statistics, data wrangling, hypothesis testing, and business metrics analysis.</p>
+                        </div>
+                        <button class="btn-cert-view" data-cert-title="Basics of Data Analytics" data-cert-issuer="Physics Wallah" data-cert-desc="Comprehensive training in statistical data analysis methods, summary statistics, hypothesis evaluation, and practical business data case studies." type="button">
+                            <span>View Details</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== RESUME SECTION ===== -->
+        <section class="section resume-section" id="resume">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Documentation</span>
+                    <h2 class="section-title">Resume &amp; Credentials</h2>
+                    <p class="section-subtitle">Review my complete educational background, verified projects, and technical timeline.</p>
+                </div>
+
+                <div class="resume-cta-card glass-card">
+                    <div class="resume-card-content">
+                        <div class="resume-icon-badge">
+                            <i class='bx bxs-file-pdf'></i>
+                        </div>
+                        <div class="resume-text-block">
+                            <h3>Lakshya Kaushal – Official Technical Resume</h3>
+                            <p class="resume-meta">Format: Clean A4 Printable Document | Updated 2026</p>
+                            <p class="resume-summary-note">
+                                Contains verified academic record (B.Tech CSE - AI &amp; ML, CGPA: 7.5), complete skills matrix, full-stack &amp; ML projects, certifications, and direct contact details.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="resume-actions-group">
+                        <a href="assets/Lakshya_Kaushal_Resume.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-view-resume">
+                            <i class='bx bx-show'></i>
+                            <span>View My Resume</span>
+                        </a>
+                        <a href="assets/Lakshya_Kaushal_Resume.html" download="Lakshya_Kaushal_Resume.html" class="btn btn-secondary" id="btn-download-resume">
+                            <i class='bx bx-download'></i>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section class="section contact-section" id="contact">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">I'm currently seeking internship, graduate, and entry-level Software Engineering &amp; AI/ML opportunities.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class='bx bx-envelope'></i></div>
+                        <h3>Email</h3>
+                        <p>For job inquiries, interviews, and project discussions</p>
+                        <a href="mailto:kaushallakshya71@gmail.com" class="contact-direct-link">kaushallakshya71@gmail.com</a>
+                        <a href="mailto:kaushallakshya71@gmail.com" class="btn btn-contact-action">
+                            <span>Send Email</span>
+                            <i class='bx bx-send'></i>
+                        </a>
+                    </div>
+
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class='bx bxl-linkedin'></i></div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect professionally and view endorsements</p>
+                        <a href="https://www.linkedin.com/in/lakshya-kaushal-6ab266366" target="_blank" rel="noopener noreferrer" class="contact-direct-link">linkedin.com/in/lakshya-kaushal</a>
+                        <a href="https://www.linkedin.com/in/lakshya-kaushal-6ab266366" target="_blank" rel="noopener noreferrer" class="btn btn-contact-action">
+                            <span>Connect on LinkedIn</span>
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class='bx bxl-github'></i></div>
+                        <h3>GitHub</h3>
+                        <p>Inspect public repositories, commits, and project code</p>
+                        <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" class="contact-direct-link">github.com/kaushallakshya71-a11y</a>
+                        <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" class="btn btn-contact-action">
+                            <span>Explore GitHub</span>
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class='bx bx-phone-call'></i></div>
+                        <h3>Direct Phone</h3>
+                        <p>Available for recruiter screening calls</p>
+                        <span class="contact-direct-link">+91 8077438455</span>
+                        <a href="tel:+918077438455" class="btn btn-contact-action">
+                            <span>Call / WhatsApp</span>
+                            <i class='bx bx-phone'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2026 by <span>Lakshya Kaushal</span> &mdash; All Rights Reserved.</p>
+        <div class="footer-container">
+            <div class="footer-col-main">
+                <a href="#home" class="logo">
+                    <span class="logo-symbol">&lt;</span>LK<span class="logo-accent">.dev</span><span class="logo-symbol">/&gt;</span>
+                </a>
+                <p class="footer-tagline">Building practical full-stack and AI applications with precision and modern engineering standards.</p>
+            </div>
+
+            <div class="footer-col-links">
+                <span class="footer-heading">Navigation</span>
+                <div class="footer-links-grid">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#certificates">Certificates</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-col-social">
+                <span class="footer-heading">Profiles</span>
+                <div class="footer-social-icons">
+                    <a href="https://github.com/kaushallakshya71-a11y" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/lakshya-kaushal-6ab266366" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="mailto:kaushallakshya71@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+                </div>
+            </div>
         </div>
-        <div class="footer-iconTop">
-            <a href="#home" title="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Lakshya Kaushal. Built with modern web technologies.</p>
+                <a href="#home" class="back-to-top-btn" aria-label="Back to top">
+                    <span>Back to Top</span>
+                    <i class='bx bx-up-arrow-alt'></i>
+                </a>
+            </div>
         </div>
     </footer>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" id="scroll-progress"></div>
+    <!-- ===== PROJECT DETAILS MODAL ===== -->
+    <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" id="modal-close-btn" type="button" aria-label="Close Project Details Dialog">
+                <i class='bx bx-x'></i>
+            </button>
+            <div class="modal-content" id="modal-project-content">
+                <!-- Injected via JavaScript dynamically -->
+            </div>
+        </div>
+    </div>
 
-    <!-- Typed.js -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- ===== CERTIFICATE DETAILS MODAL ===== -->
+    <div class="modal-backdrop" id="cert-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title">
+        <div class="modal-dialog modal-dialog-sm">
+            <button class="modal-close-btn" id="modal-cert-close-btn" type="button" aria-label="Close Certificate Dialog">
+                <i class='bx bx-x'></i>
+            </button>
+            <div class="modal-content" id="modal-cert-content">
+                <!-- Injected via JavaScript dynamically -->
+            </div>
+        </div>
+    </div>
 
-    <!-- Custom JS -->
+    <!-- Application Script -->
     <script src="js/script.js"></script>
 </body>
 </html>

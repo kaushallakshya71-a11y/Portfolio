@@ -1,1 +1,14 @@
-{"name": "portfolio-site", "version": "1.0.0", "description": "Portfolio", "main": "index.js", "scripts": {"start": "node index.js"}, "dependencies": {"express": "^4.18.2"}}
+{
+  "name": "lakshya-kaushal-portfolio",
+  "version": "2.0.0",
+  "description": "Portfolio of Lakshya Kaushal - Final-Year B.Tech CSE (AI & ML) Student & Full-Stack Developer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "build": "echo 'Build step complete. Static assets ready.'"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
